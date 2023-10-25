@@ -1,0 +1,573 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18092,        564]
+NotebookOptionsPosition[     16584,        515]
+NotebookOutlinePosition[     16951,        531]
+CellTagsIndexPosition[     16908,        528]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 11 Problem 2 & 3:",
+ FontSize->36]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.657052716436322*^9, 3.6570527253796787`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Exercise 2:",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6570527342881546`*^9, 3.6570527517775965`*^9}, {
+   3.6570528295134497`*^9, 3.6570528303670735`*^9}, 3.6570534148824873`*^9, 
+   3.6571533787478113`*^9, 3.6573967556365833`*^9}],
+
+Cell["\<\
+
+Parametrization of Penguin\[CloseCurlyQuote]s cockpit/windshield:\
+\>", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CapitalPhi]", "[", 
+   RowBox[{"u_", ",", "v_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"3", 
+     RowBox[{"Sin", "[", "u", "]"}], 
+     RowBox[{"Cos", "[", "v", "]"}]}], ",", 
+    RowBox[{"2", 
+     RowBox[{"Sin", "[", "u", "]"}], 
+     RowBox[{"Sin", "[", "v", "]"}]}], ",", 
+    RowBox[{"Cos", "[", "u", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PengMobile", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"\[CapitalPhi]", "[", 
+     RowBox[{"u", ",", "v"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"u", ",", "0", ",", 
+      RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"White", ",", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "}"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell["Parametrization of front half of windshield:", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[
+ RowBox[{"PengShield", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"\[CapitalPhi]", "[", 
+     RowBox[{"u", ",", "v"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"u", ",", "0", ",", 
+      RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", ",", 
+      RowBox[{
+       RowBox[{"-", "Pi"}], "/", "2"}], ",", 
+      RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"White", ",", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"R", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0", ",", 
+    RowBox[{"-", "5"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Rain", "=", 
+  RowBox[{"VectorFieldPlot3D", "[", 
+   RowBox[{
+    RowBox[{"R", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "5"}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell["\<\
+Rain hitting Penguin\[CloseCurlyQuote]s windshield (and probably Batman\
+\[CloseCurlyQuote]s as well) when idle at stoplight:\
+\>", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"PengMobile", ",", "Rain", ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "3"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell["Amount of rain hitting Penguin\[CloseCurlyQuote]s windshield:", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Apply", "[", 
+     RowBox[{"R", ",", 
+      RowBox[{"\[CapitalPhi]", "[", 
+       RowBox[{"u", ",", "v"}], "]"}]}], "]"}], ".", 
+    RowBox[{"Cross", "[", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", "u"}], "]"}], ",", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", "v"}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "0", ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[TextData[{
+ "This means that the flux integral of the rain is ",
+ StyleBox["-30\[Pi]",
+  FontWeight->"Bold"],
+ " (negative because the rain is falling down onto the windshield) or ",
+ StyleBox["\[TildeTilde]-94.25",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell["\<\
+Light turns green, Penguin rockets off, new vector field of rain hitting his \
+shield:\
+\>", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Move", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", "40"}], ",", "0", ",", 
+    RowBox[{"-", "10"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"NRain", "=", 
+  RowBox[{"VectorFieldPlot3D", "[", 
+   RowBox[{
+    RowBox[{"Move", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "5"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"NRain", ",", "PengMobile"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"PengShield", ",", "NRain"}], "]"}]}], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell["\<\
+Amount of rain hitting the front half of Penguin\[CloseCurlyQuote]s \
+windshield as he drives off (most likely speeding since, well, he\
+\[CloseCurlyQuote]s a villain):\
+\>", "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Apply", "[", 
+     RowBox[{"Move", ",", 
+      RowBox[{"\[CapitalPhi]", "[", 
+       RowBox[{"u", ",", "v"}], "]"}]}], "]"}], ".", 
+    RowBox[{"Cross", "[", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", "u"}], "]"}], ",", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"\[CapitalPhi]", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", "v"}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "0", ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"v", ",", 
+     RowBox[{
+      RowBox[{"-", "Pi"}], "/", "2"}], ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input",
+ CellChangeTimes->{3.6573967556365833`*^9}],
+
+Cell[TextData[{
+ "As Penguin speeds off, the flux integral of the rain increases (decreases?) \
+to",
+ StyleBox[" -70\[Pi] ",
+  FontWeight->"Bold"],
+ "or ",
+ StyleBox["\[TildeTilde]-219.91",
+  FontWeight->"Bold"],
+ ", meaning more rain is now obscuring Penguin\[CloseCurlyQuote]s vision. ",
+ StyleBox["Now\[CloseCurlyQuote]s your chance Batman! He\[CloseCurlyQuote]s \
+blinded, go get him!\n",
+  FontSlant->"Italic"],
+ StyleBox["[MUFFLED ",
+  FontSize->16,
+  FontWeight->"Bold"],
+ StyleBox["NANANANANANANANA... BATMAAAANN!!! ",
+  FontSize->16,
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox["PLAYING IN THE BACKGROUND]",
+  FontSize->16,
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{3.6573967556365833`*^9}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.6570527551595817`*^9, 3.657052755314725*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Exercise 3:",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6570527629430914`*^9, 3.657052767366284*^9}, 
+   3.65705341705503*^9, 3.6573776150008664`*^9, 3.657396761396661*^9}],
+
+Cell["\<\
+
+The Bat Signal(?) on a 2D surface:\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Lies", "[", 
+   RowBox[{"r_", ",", "\[CapitalTheta]_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"r", " ", 
+     RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}]}], ",", 
+    RowBox[{"r", " ", 
+     RowBox[{"Sin", "[", "\[CapitalTheta]", "]"}]}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"Lies", "[", 
+    RowBox[{"r", ",", "\[CapitalTheta]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalTheta]", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"FilledCurve", ",", "Yellow"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.657157511471825*^9, 3.657157645415394*^9}, {
+   3.6573744695099363`*^9, 3.657374642809084*^9}, 3.65737539230309*^9, 
+   3.6573776150008664`*^9, {3.6573967613976607`*^9, 3.6573967678452387`*^9}}],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s parametrize some not-so-happy little storm clouds \
+(it ",
+ StyleBox["is ",
+  FontSlant->"Italic"],
+ "Gotham after all):"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"BobRoss", "[", 
+   RowBox[{"x_", ",", "y_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"x", ",", "y", ",", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"x", "+", "y"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"HappyCloud", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"BobRoss", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{
+       RowBox[{"-", "2"}], "Pi"}], ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{
+       RowBox[{"-", "2"}], "Pi"}], ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Opacity", "[", "0.6", "]"}], ",", "Gray"}], "}"}]}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6571572909060273`*^9, 3.6571573211154766`*^9}, {
+   3.657157352041483*^9, 3.6571574279962344`*^9}, {3.657374403462265*^9, 
+   3.6573744348376155`*^9}, {3.657375119893347*^9, 3.657375121627675*^9}, {
+   3.657375174878358*^9, 3.6573752346448107`*^9}, 3.6573776150008664`*^9, {
+   3.657396761399681*^9, 3.6573967678452387`*^9}}],
+
+Cell["\<\
+Now let\[CloseCurlyQuote]s parametrize the fake Bat Signal\[CloseCurlyQuote]s \
+projection onto the clouds (who is Gordon even trying to call, Batman or \
+Circledude?):\
+\>", "Text",
+ CellChangeTimes->{{3.6573752592544413`*^9, 3.6573752772547245`*^9}, {
+   3.6573753451503525`*^9, 3.6573753718673286`*^9}, 3.6573776150008664`*^9, {
+   3.657396761399681*^9, 3.6573967678452387`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"NotBatSignal", "[", 
+   RowBox[{"r_", ",", "\[CapitalTheta]_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"r", "*", 
+     RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}]}], ",", 
+    RowBox[{"r", "*", 
+     RowBox[{"Sin", "[", "\[CapitalTheta]", "]"}]}], ",", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"r", "*", 
+       RowBox[{"Cos", "[", "\[CapitalTheta]", "]"}]}], "+", 
+      RowBox[{"r", "*", 
+       RowBox[{"Sin", "[", "\[CapitalTheta]", "]"}]}]}], "]"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Light", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"NotBatSignal", "[", 
+     RowBox[{"r", ",", "\[CapitalTheta]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "2", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[CapitalTheta]", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Yellow", ",", 
+       RowBox[{"Opacity", "[", "0.6", "]"}]}], "}"}]}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"HappyCloud", ",", "Light", ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", 
+      RowBox[{"-", "1"}]}], "}"}]}]}], "]"}]}], "Input"],
+
+Cell["\<\
+Gotham\[CloseCurlyQuote]s perpetual fog varies the density of photons being \
+projected:\
+\>", "Text",
+ CellChangeTimes->{{3.6573746535435963`*^9, 3.657374665215587*^9}, {
+   3.6573767224309897`*^9, 3.6573767543217773`*^9}, 3.6573776150008664`*^9, {
+   3.6573967614006824`*^9, 3.6573967678452387`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Fog", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0", ",", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x", "+", "y"}], ")"}], "^", "2"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"CantSee", "=", 
+  RowBox[{"VectorFieldPlot3D", "[", 
+   RowBox[{
+    RowBox[{"Fog", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "15"}], ",", "0"}], "}"}]}], "]"}]}]}], "Input"],
+
+Cell["Amount of light shining to make the not-Bat Signal:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{"Show", "[", 
+  RowBox[{"CantSee", ",", "hmm", ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "3", ",", 
+      RowBox[{"-", "1"}]}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Apply", "[", 
+     RowBox[{"Fog", ",", 
+      RowBox[{"NotBatSignal", "[", 
+       RowBox[{"r", ",", "\[CapitalTheta]"}], "]"}]}], "]"}], ".", 
+    RowBox[{"Cross", "[", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"NotBatSignal", "[", 
+         RowBox[{"r", ",", "\[CapitalTheta]"}], "]"}], ",", "r"}], "]"}], ",", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"NotBatSignal", "[", 
+         RowBox[{"r", ",", "\[CapitalTheta]"}], "]"}], ",", 
+        "\[CapitalTheta]"}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalTheta]", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input"],
+
+Cell[TextData[{
+ "Thus the flux integral of the photons hitting the wavy clouds to form the \
+not-Bat Signal is ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"609", "\[Pi]"}], "2"], TraditionalForm]],
+  FontWeight->"Bold"],
+ "or ",
+ StyleBox["\[TildeTilde]956.62",
+  FontWeight->"Bold"],
+ ". The answer is positive becaus the photons are shining up towards the \
+clouds, meaning the normal points up."
+}], "Text",
+ CellChangeTimes->{{3.657377195572605*^9, 3.6573772244591217`*^9}, {
+   3.657377315172288*^9, 3.657377497637267*^9}, 3.6573776150008664`*^9, {
+   3.657396761404665*^9, 3.65739676784624*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.6573776237353535`*^9, 3.6573776238604083`*^9}}],
+
+Cell[TextData[StyleBox["\nWho knew that using math, one of the most \
+diabolical creations of mankind and the weakness of heroes, villains, and \
+normal people alike (not even Braniac likes math!) would help our caped \
+crusader of the night in his heroic endeavors?",
+ FontSize->16,
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.657377195572605*^9, 3.6573772244591217`*^9}, {
+   3.657377315172288*^9, 3.657377594084919*^9}, 3.657377631329248*^9}]
+},
+CellGrouping->Manual,
+WindowSize->{1536, 783},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 170, 3, 66, "Text"],
+Cell[CellGroupData[{
+Cell[753, 27, 277, 7, 79, "Text"],
+Cell[1033, 36, 134, 4, 49, "Text"],
+Cell[1170, 42, 1063, 30, 52, "Input"],
+Cell[2236, 74, 104, 1, 30, "Text"],
+Cell[2343, 77, 730, 20, 31, "Input"],
+Cell[3076, 99, 671, 20, 52, "Input"],
+Cell[3750, 121, 193, 4, 30, "Text"],
+Cell[3946, 127, 458, 14, 31, "Input"],
+Cell[4407, 143, 121, 1, 30, "Text"],
+Cell[4531, 146, 851, 25, 52, "Input"],
+Cell[5385, 173, 304, 9, 30, "Text"],
+Cell[5692, 184, 154, 4, 30, "Text"],
+Cell[5849, 190, 892, 26, 92, "Input"],
+Cell[6744, 218, 236, 5, 30, "Text"],
+Cell[6983, 225, 908, 27, 52, "Input"],
+Cell[7894, 254, 722, 23, 52, "Text"]
+}, Closed]],
+Cell[8631, 280, 126, 2, 33, "Input"],
+Cell[CellGroupData[{
+Cell[8782, 286, 214, 6, 60, "Text"],
+Cell[8999, 294, 59, 3, 49, "Text"],
+Cell[9061, 299, 974, 25, 52, "Input"],
+Cell[10038, 326, 174, 6, 30, "Text"],
+Cell[10215, 334, 1226, 32, 52, "Input"],
+Cell[11444, 368, 392, 7, 30, "Text"],
+Cell[11839, 377, 1337, 37, 72, "Input"],
+Cell[13179, 416, 312, 6, 30, "Text"],
+Cell[13494, 424, 719, 23, 52, "Input"],
+Cell[14216, 449, 67, 0, 30, "Text"],
+Cell[14286, 451, 1078, 30, 72, "Input"],
+Cell[15367, 483, 615, 16, 42, "Text"]
+}, Closed]],
+Cell[15997, 502, 126, 2, 35, "Input"],
+Cell[16126, 506, 454, 7, 77, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

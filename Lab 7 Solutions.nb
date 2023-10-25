@@ -1,0 +1,718 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23646,        709]
+NotebookOptionsPosition[     22490,        666]
+NotebookOutlinePosition[     22885,        683]
+CellTagsIndexPosition[     22842,        680]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 7 Problems 2, 4, 5",
+ FontSize->48]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.654955502055987*^9, 3.6549555144155517`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Problem 2",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6549555387908554`*^9, 3.6549555553535166`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"shape", "=", 
+  RowBox[{"ContourPlot3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], "\[Equal]", "9"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"x", "^", "2"}], "-", 
+           RowBox[{"y", "^", "2"}]}], ")"}], "/", "10"}], "+", "3"}], 
+       "\[Equal]", "z"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "5"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"ContourStyle", "\[Rule]", 
+     RowBox[{"Opacity", "[", "0.7", "]"}]}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", " ", "1", ",", " ", "1"}], "}"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6549564280154524`*^9, 3.654956740525267*^9}, {
+   3.6549569476052585`*^9, 3.6549569522445536`*^9}, {3.6549570736687403`*^9, 
+   3.6549570794858713`*^9}, 3.654957172626285*^9, {3.6549579695469704`*^9, 
+   3.6549579996453357`*^9}, {3.654958645267037*^9, 3.6549586470863276`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part a)",
+ FontSize->18]], "Text",
+ CellChangeTimes->{{3.6549572368818808`*^9, 3.6549572482649775`*^9}, {
+  3.654957281802762*^9, 3.654957281927908*^9}, {3.654957318393736*^9, 
+  3.6549573265255284`*^9}, {3.654985515368949*^9, 3.6549855365359735`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"eqa", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"3", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "Pi", " ", "t"}], "]"}]}], ",", 
+    RowBox[{"3", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "Pi", " ", "t"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"9", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", "Pi", " ", "t"}], "]"}], "^", "2"}], "-", 
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{"2", "Pi", " ", "t"}], "]"}], "^", "2"}]}], ")"}], "/", 
+       "10"}]}], "+", "3"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"intersect", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{"eqa", ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"Thick", ",", "Red"}], "}"}]}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", " ", "1", ",", " ", "1"}], "}"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.654956819091055*^9, 3.654957052146468*^9}, {
+  3.654957179598215*^9, 3.6549571825343184`*^9}, {3.654958028131538*^9, 
+  3.6549580349423723`*^9}, {3.654958069171668*^9, 3.65495811312187*^9}}],
+
+Cell[TextData[{
+ "In order to find the parametrization, we must first look at the projection \
+of the intersection onto the ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ "-plane. This is the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}], "=", 
+    RowBox[{"9", " ", "which", " ", "parametrized", " ", "is", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"3", 
+         RowBox[{"cos", "(", "t", ")"}]}], ",", 
+        RowBox[{"3", 
+         RowBox[{"sin", "(", "t", ")"}]}]}], ")"}], "."}]}]}], 
+   TraditionalForm]]],
+ " Now we have a 2D parametrized plot of the intersection. The problem now is \
+to find the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "(", "t", ")"}], TraditionalForm]]],
+ " aspect of the parametrized equation. Since we know that ",
+ StyleBox["z ",
+  FontSlant->"Italic"],
+ "is defined by the curve: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", 
+       SuperscriptBox["y", "2"]}], "10"], "+", 
+     RowBox[{
+     "3", "  ", "we", " ", "can", " ", "set", " ", "the", " ", 
+      "parametrization", " ", "to"}]}]}], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"z", "(", "t", ")"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"x", "(", "t", ")"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"y", "(", "t", ")"}], "2"]}], "10"], "+", "3"}]}], 
+   TraditionalForm]]],
+ " where we have already defined",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"x", 
+     RowBox[{"(", "t", ")"}], " ", "and", " ", "y", 
+     RowBox[{"(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Thus, the graph for the intersection is: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     StyleBox["(",
+      FontSize->12], 
+     RowBox[{
+      StyleBox[
+       RowBox[{"3", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}]}],
+       FontSize->12], 
+      StyleBox[",",
+       FontSize->12], 
+      StyleBox[" ",
+       FontSize->12], 
+      StyleBox[
+       RowBox[{"3", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}]}],
+       FontSize->12], 
+      StyleBox[",",
+       FontSize->12], 
+      StyleBox[" ",
+       FontSize->12], 
+      RowBox[{
+       StyleBox["3",
+        FontSize->12], 
+       StyleBox["+",
+        FontSize->12], 
+       RowBox[{
+        FractionBox["9", "10"], " ", 
+        RowBox[{
+         StyleBox["(",
+          FontSize->12], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{
+            StyleBox[
+             RowBox[{
+              StyleBox["C",
+               FontSize->12], "os"}]], "[", 
+            RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}], "2"], 
+          StyleBox["-",
+           FontSize->12], 
+          StyleBox[
+           SuperscriptBox[
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}], "2"],
+           FontSize->12]}], 
+         StyleBox[")",
+          FontSize->12]}]}]}]}], 
+     StyleBox[")",
+      FontSize->12]}], 
+    StyleBox[" ",
+     FontSize->12], 
+    StyleBox[";",
+     FontSize->18], " ", 
+    RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", "1"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which is shown above (note we also could have had only ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ " with 0 \[LessEqual] ",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "\[LessEqual] 2\[Pi] instead of 2\[Pi]",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "with 0 \[LessEqual] ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ " \[LessEqual] 1 as our parameter as well). Overlaying the two graphs over \
+each other shows that this parametrization is indeed the intersection of the \
+two surfaces."
+}], "Text",
+ CellChangeTimes->{{3.654957349260697*^9, 3.654957349951187*^9}, {
+  3.655058872208661*^9, 3.6550590064183674`*^9}, {3.6550590496604557`*^9, 
+  3.655059141055771*^9}, {3.6550592481843204`*^9, 3.6550593439354477`*^9}, {
+  3.655059922386367*^9, 3.6550599757012*^9}, {3.6550600591224165`*^9, 
+  3.655060185538148*^9}, {3.6550602829392867`*^9, 3.6550603386738486`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"shape", ",", "intersect"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6549570587061205`*^9, 3.654957059657815*^9}, {
+  3.6549571886126137`*^9, 3.6549571941645737`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part b)",
+ FontSize->18]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.65495744116088*^9, 3.6549574606427274`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"eqb", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"s", " ", 
+     RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+    RowBox[{"s", " ", 
+     RowBox[{"Sin", "[", "t", "]"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"s", "^", "2"}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Cos", "[", "t", "]"}], "^", "2"}], "-", 
+         RowBox[{
+          RowBox[{"Sin", "[", "t", "]"}], "^", "2"}]}], ")"}], "/", "10"}]}], 
+     "+", "3"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"cutoff", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{"eqb", ",", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", "0", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Green"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", " ", "1", ",", " ", "1"}], "}"}]}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.654958152268655*^9, 3.654958187670782*^9}, {
+  3.6549582351194715`*^9, 3.654958404796324*^9}, {3.6549584415634413`*^9, 
+  3.654958445289067*^9}, {3.6549584862231426`*^9, 3.6549585009436235`*^9}, {
+  3.654958537462495*^9, 3.654958538170045*^9}, {3.654958570325821*^9, 
+  3.6549585758047113`*^9}, {3.654958609237462*^9, 3.654958613172255*^9}, {
+  3.654985684710066*^9, 3.654985731285107*^9}, {3.6550594489461107`*^9, 
+  3.6550594578056374`*^9}, {3.655059522438365*^9, 3.6550595353400064`*^9}}],
+
+Cell[TextData[{
+ "For part b, the approach is the same as part a. The difference this time is \
+that we are instead looking for a surface instead of a curve, meaning we \
+essentially take the paramatric equation from part a and fill it in. We do \
+this by adding a second parameter. All the equations for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", "t", ")"}], ",", " ", 
+    RowBox[{"y", "(", "t", ")"}], ",", " ", 
+    RowBox[{"and", " ", 
+     RowBox[{"z", "(", "t", ")"}], " "}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "are the exact same as above except where we had denoted the unit circle \
+projection of the intersection on the ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ "-plane with a constant (3 in this case as the radius of the cylinder is 3) \
+we replace it with this new parameter ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ". Note we can either use the parameter ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ "; 0 \[LessEqual] ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " \[LessEqual] 3 or 3",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ "; 0 \[LessEqual] ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " \[LessEqual] 1. The new equation transforms from ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}]}], ",", " ", 
+       RowBox[{"3", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}]}], ",", " ", 
+       RowBox[{"3", "+", 
+        RowBox[{
+         FractionBox["9", "10"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "\[Pi]", " ", "t"}], "]"}], "2"]}], 
+          ")"}]}]}]}], ")"}], " ", ";", " ", 
+     RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", "1"}]}],
+    FontSize->12], TraditionalForm]]],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"s", " ", 
+       RowBox[{"Cos", "[", "t", "]"}]}], ",", " ", 
+      RowBox[{"s", " ", 
+       RowBox[{"Sin", "[", "t", "]"}]}], ",", " ", 
+      RowBox[{"3", "+", 
+       RowBox[{
+        FractionBox[
+         SuperscriptBox["s", "2"], "10"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "t", "]"}], "2"], "-", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "t", "]"}], "2"]}], ")"}]}]}]}], ")"}], " ", 
+    ";", " ", 
+    RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", 
+     RowBox[{"2", "\[Pi]"}]}], " ", ";", "  ", 
+    RowBox[{"0", "\[LessEqual]", "s", "\[LessEqual]", "3"}]}], 
+   TraditionalForm]],
+  FontSize->12],
+ ". Overlaying the new parametric surface and the parametric curve together \
+shows that the new equation is correct."
+}], "Text",
+ CellChangeTimes->{{3.6550596213167715`*^9, 3.6550596679261136`*^9}, {
+  3.655059799634243*^9, 3.6550598875977325`*^9}, {3.655060208241262*^9, 
+  3.655060276122448*^9}, {3.6550604506629915`*^9, 3.655060478573786*^9}, {
+  3.655060924325905*^9, 3.655061037404191*^9}, {3.6550610694929466`*^9, 
+  3.6550612342989316`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"intersect", ",", "cutoff"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6549584528434286`*^9, 3.6549584724733825`*^9}, {
+  3.654985625575091*^9, 3.654985643394741*^9}, {3.6550582944226894`*^9, 
+  3.6550583028881226`*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.654955575400633*^9, 3.6549555767756453`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Problem 4",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6549555888852215`*^9, 3.6549556344482684`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"p4", "=", 
+  RowBox[{"{", 
+   RowBox[{"x", ",", 
+    RowBox[{"-", 
+     RowBox[{"Sin", "[", "x", "]"}]}], ",", "z"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{"p4", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], ",", 
+   RowBox[{"Mesh", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"15", ",", "1"}], "}"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Opacity", "[", ".75", "]"}], ",", "Pink"}], "}"}]}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "Automatic"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.654955678058207*^9, 3.6549559848471327`*^9}, {
+   3.654956161714428*^9, 3.6549561754621673`*^9}, {3.6549586961771736`*^9, 
+   3.654958791704851*^9}, {3.654986915238082*^9, 3.654986918714557*^9}, {
+   3.6549872517793446`*^9, 3.654987266872059*^9}, 3.6550637948793373`*^9, {
+   3.6550639987032437`*^9, 3.6550641070621595`*^9}, {3.6550644349867115`*^9, 
+   3.6550644584523697`*^9}, {3.655064490741287*^9, 3.65506450341228*^9}}],
+
+Cell[TextData[{
+ "This surface isn\[CloseCurlyQuote]t too difficult to figure out. The \
+cartesian graph is given by the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"-", 
+     RowBox[{"sin", "(", "x", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". The figure is just a part of that graph. Since the figure goes from 0 \
+\[Rule] 2\[Pi] that means ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ ") should also be limited within that region, and ",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ ") from 0 \[Rule] 1 to give it a height of 1. Since it\[CloseCurlyQuote]s a \
+surface, there will be two parameters (I chose to leave the parameters as ",
+ StyleBox["x ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["z ",
+  FontSlant->"Italic"],
+ "instead of changing them to ",
+ StyleBox["s ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ "). Thus, the parametric equation can be given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", 
+       RowBox[{"sin", "(", "x", ")"}]}], ",", "z"}], ")"}], ";", " ", 
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", 
+     RowBox[{"2", "\[Pi]"}]}], ";", " ", 
+    RowBox[{"0", "\[LessEqual]", "z", "\[LessEqual]", "1"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which is shown above and matches the figure given in the problem."
+}], "Text",
+ CellChangeTimes->{{3.654985565799755*^9, 3.6549855665102468`*^9}, {
+  3.6550612518074102`*^9, 3.6550612525659704`*^9}, {3.6550637113851213`*^9, 
+  3.65506371667988*^9}, {3.655064204694351*^9, 3.6550642687087927`*^9}, {
+  3.6550643100503864`*^9, 3.655064430989871*^9}, {3.655064543289585*^9, 
+  3.6550645559285583`*^9}, {3.6550645884206214`*^9, 3.655064677907471*^9}, {
+  3.6550653722632713`*^9, 3.6550653757577343`*^9}, {3.655065687707157*^9, 
+  3.655065690724286*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.654955642276476*^9, 3.6549556437296505`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["\n",
+  FontSize->18],
+ StyleBox["Problem 5",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6549556572454443`*^9, 3.654955663854905*^9}, {
+  3.6550581189891233`*^9, 3.655058122574366*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"p5", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"y", " ", "z"}], "]"}]}], ",", "y", ",", "z"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{"p5", ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{
+      RowBox[{"-", "Pi"}], "/", "2"}], ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{
+      RowBox[{"-", "Pi"}], "/", "2"}], ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Opacity", "[", "0.75", "]"}], ",", "White"}], "}"}]}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "10"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6549857628114853`*^9, 3.6549858702145796`*^9}, {
+   3.6549859025435286`*^9, 3.6549859693799887`*^9}, {3.6549860112875385`*^9, 
+   3.654986231830459*^9}, {3.6549862682664747`*^9, 3.654986319992715*^9}, {
+   3.654986380599559*^9, 3.654986465902091*^9}, 3.6549865000263324`*^9, {
+   3.654986532642483*^9, 3.6549865427084813`*^9}, {3.6549865874226575`*^9, 
+   3.6549865893770275`*^9}, {3.6549867065801907`*^9, 
+   3.6549867363393145`*^9}, {3.6549867956338463`*^9, 
+   3.6549868536273465`*^9}, {3.654987082962927*^9, 3.6549870930610847`*^9}, {
+   3.6549872848558292`*^9, 3.6549872965931606`*^9}, {3.6549873566357803`*^9, 
+   3.6549874159394183`*^9}, {3.6549875229941764`*^9, 
+   3.6549875279597015`*^9}, {3.6549876007193103`*^9, 
+   3.6549876956395836`*^9}, {3.654987759991378*^9, 3.6549877712743874`*^9}, 
+   3.6549878047712965`*^9, {3.655058015801905*^9, 3.6550580716447806`*^9}, {
+   3.6550581421027584`*^9, 3.6550581429718094`*^9}, {3.6550637251808634`*^9, 
+   3.6550638433747787`*^9}, {3.6550641210881357`*^9, 
+   3.6550641298253336`*^9}, {3.6550641711466494`*^9, 3.655064173863584*^9}, {
+   3.65506451481039*^9, 3.655064529734969*^9}, {3.6550647074904723`*^9, 
+   3.655064823615569*^9}, {3.6550648551329327`*^9, 3.6550648628223934`*^9}, {
+   3.6550649139096537`*^9, 3.6550650854610786`*^9}}],
+
+Cell[TextData[{
+ "Just like in problem 4, this equation isn\[CloseCurlyQuote]t to difficult \
+to figure out. Since this is a part of the graph ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    RowBox[{"-", 
+     RowBox[{"cos", "(", 
+      RowBox[{"y", "*", "z"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " the parametrization should be easy to set up. The only thing to remember \
+is that ",
+ StyleBox["y",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ ") is bounded by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "y", "\[LessEqual]", 
+    RowBox[{
+     RowBox[{
+      FractionBox["\[Pi]", "2"], " ", "and", " ", 
+      RowBox[{"z", "(", "t", ")"}], " ", "is", " ", "bounded", " ", "by"}], 
+     " ", "-", 
+     FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "y", "\[LessEqual]", 
+    FractionBox["\[Pi]", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Using ",
+ StyleBox["y ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["z ",
+  FontSlant->"Italic"],
+ "as our two parameters, we get the parametric equation: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"cos", "(", 
+        RowBox[{"y", "*", "z"}], ")"}]}], ",", "y", ",", "z"}], ")"}], ";", 
+    " ", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "y", "\[LessEqual]", 
+     FractionBox["\[Pi]", "2"]}], 
+    StyleBox[";",
+     FontSize->16], " ", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "z", "\[LessEqual]", 
+     FractionBox["\[Pi]", "2"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which is shown above and matches the figure given in the problem."
+}], "Text",
+ CellChangeTimes->{{3.655064687914579*^9, 3.6550647031714053`*^9}, {
+  3.655065094965828*^9, 3.6550653222527533`*^9}, {3.655065380354005*^9, 
+  3.6550653899968433`*^9}, {3.655065706258322*^9, 3.6550657104883146`*^9}}]
+}, Closed]]
+},
+CellGrouping->Manual,
+WindowSize->{752, 767},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.05 Inherited,
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 171, 3, 83, "Text"],
+Cell[CellGroupData[{
+Cell[754, 27, 145, 5, 83, "Text"],
+Cell[902, 34, 1520, 40, 72, "Input"],
+Cell[CellGroupData[{
+Cell[2447, 78, 276, 4, 36, "Text"],
+Cell[2726, 84, 1463, 40, 72, "Input"],
+Cell[4192, 126, 4289, 143, 239, "Text"],
+Cell[8484, 271, 213, 4, 31, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8734, 280, 157, 3, 42, "Text"],
+Cell[8894, 285, 1742, 42, 92, "Input"],
+Cell[10639, 329, 3300, 93, 236, "Text"],
+Cell[13942, 424, 265, 5, 31, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[14234, 433, 124, 2, 35, "Input"],
+Cell[CellGroupData[{
+Cell[14383, 439, 143, 5, 63, "Text"],
+Cell[14529, 446, 1285, 30, 72, "Input"],
+Cell[15817, 478, 1980, 56, 152, "Text"]
+}, Closed]],
+Cell[17812, 537, 124, 2, 35, "Input"],
+Cell[CellGroupData[{
+Cell[17961, 543, 218, 7, 68, "Text"],
+Cell[18182, 552, 2261, 47, 92, "Input"],
+Cell[20446, 601, 2028, 62, 132, "Text"]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

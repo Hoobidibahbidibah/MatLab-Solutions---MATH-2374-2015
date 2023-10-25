@@ -1,0 +1,734 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22997,        725]
+NotebookOptionsPosition[     20948,        655]
+NotebookOutlinePosition[     21344,        672]
+CellTagsIndexPosition[     21301,        669]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 9 Problems 1, 2, 3",
+ FontSize->36]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.656161038186371*^9, 3.6561610531980457`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Problem 1",
+  FontSize->18]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656161065434749*^9, 3.6561610718682775`*^9}, 
+   3.6561640448566027`*^9}],
+
+Cell[TextData[{
+ "We want to show how work the force of gravity does on an object of mass ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"m", "=", "1"}], TraditionalForm]]],
+ " as it follows the path ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"50", 
+        SuperscriptBox["e", 
+         RowBox[{"-", "t"}]], 
+        RowBox[{"cos", "(", "t", ")"}]}], ",", 
+       RowBox[{"50", 
+        SuperscriptBox["e", 
+         RowBox[{"-", "t"}]], 
+        RowBox[{"sin", "(", "t", ")"}]}], ",", 
+       RowBox[{
+        SuperscriptBox["t", "2"], "+", 
+        RowBox[{"5", "t"}]}]}], ")"}], "      ", "0"}], "\[LessEqual]", "t", 
+    "\[LessEqual]", "5"}], TraditionalForm]]],
+ ". We can use the line integral equation."
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6561616213225403`*^9, 3.656161621869425*^9}, {
+   3.6561616926672297`*^9, 3.6561618120126524`*^9}, {3.656163730137727*^9, 
+   3.6561637533567944`*^9}, 3.6561640448566027`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"DaEarf", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     RowBox[{"-", "9.8"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "t_", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"50", 
+      RowBox[{"E", "^", 
+       RowBox[{"-", "t"}]}], " ", 
+      RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+     RowBox[{"50", 
+      RowBox[{"E", "^", 
+       RowBox[{"-", "t"}]}], " ", 
+      RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"t", "^", "2"}], "+", 
+      RowBox[{"5", "t"}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gravy", "=", 
+   RowBox[{"VectorFieldPlot3D", "[", 
+    RowBox[{
+     RowBox[{"DaEarf", "[", 
+      RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "10"}], ",", "50"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "10"}], ",", "50"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", "0", ",", "50"}], "}"}], ",", 
+     RowBox[{"VectorHeads", "\[Rule]", "True"}], ",", 
+     RowBox[{"ScaleFactor", "\[Rule]", "2.5"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fly", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "5"}], "}"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<X\>\"", ",", "\"\<Y\>\"", ",", "\"\<Z\>\""}], "}"}]}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"gravy", ",", "fly"}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656161846981843*^9, 3.656161912232718*^9}, {
+   3.656161982202424*^9, 3.6561621399702654`*^9}, {3.6561621753769946`*^9, 
+   3.656162207518013*^9}, {3.6561622613468695`*^9, 3.656162378942248*^9}, {
+   3.656162473499059*^9, 3.6561625262185884`*^9}, {3.6561625689154663`*^9, 
+   3.656162727035403*^9}, {3.6561627578952074`*^9, 3.6561628364724894`*^9}, {
+   3.6561628921919537`*^9, 3.6561630244125566`*^9}, {3.6561630550692234`*^9, 
+   3.6561632359623375`*^9}, {3.6561633250416613`*^9, 3.6561633449638133`*^9}, 
+   3.6561640448566027`*^9, {3.6561641525455713`*^9, 3.6561641639832296`*^9}, {
+   3.656164194452342*^9, 3.6561641968273916`*^9}, {3.6561655673099036`*^9, 
+   3.656165578432816*^9}, {3.6561656175526514`*^9, 3.65616565815355*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"meh", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"DaEarf", ",", 
+    RowBox[{"f", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"weh", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "t", "]"}], ",", "t"}], "]"}]}], "\n", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"meh", ".", "weh"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "5"}], "}"}]}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656163263634544*^9, 3.6561632887442937`*^9}, {
+   3.656163363667194*^9, 3.6561633650734644`*^9}, {3.656163395799349*^9, 
+   3.6561634185496583`*^9}, 3.6561640448566027`*^9, {3.65616553540722*^9, 
+   3.6561655423761806`*^9}, {3.656638234941579*^9, 3.6566382412010403`*^9}}],
+
+Cell[TextData[{
+ "So gravity does ",
+ StyleBox["-490 Joules ",
+  FontWeight->"Bold"],
+ "of work on the particle, meaning it gains a ",
+ StyleBox["490 Joules ",
+  FontWeight->"Bold"],
+ "of gravitational potential energy. Let\[CloseCurlyQuote]s double check \
+using the physics equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["U", "G"], "=", 
+    RowBox[{"m", " ", "g", " ", "\[CapitalDelta]h"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Since only the ",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ " coordinate will matter in this case, we only need to look at the \
+corresponding part of the parametric equation: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "=", 
+    RowBox[{
+     SuperscriptBox["t", "2"], "+", 
+     RowBox[{"5", "t"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". When ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"t", "=", "0"}], ",", " ", 
+    RowBox[{"f", "=", "0"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"t", "=", "5"}], ",", 
+    RowBox[{"f", "=", "50"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " thus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]h", "=", "50"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". So ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["U", "G"], "=", 
+    RowBox[{
+     RowBox[{"1", "*", "9.8", "*", "50"}], "=", "490"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which denotes a gain in gravitational potential energy so our solution is \
+correct."
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656163597385909*^9, 3.656163614448591*^9}, {
+   3.656163758794367*^9, 3.656164009949874*^9}, 3.6561640448566027`*^9}]
+}, Closed]],
+
+Cell["", "Text",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.656163376620446*^9, 3.656163382136197*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Problem 2",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.6561611042593393`*^9, 3.6561611091968575`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Gravy", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"6.67", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "11"}]}], "*", "5.98", "*", 
+      RowBox[{"10", "^", "24"}]}], ")"}], "/", 
+    RowBox[{
+     RowBox[{"Norm", "[", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}], "]"}], "^", "2"}]}], "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "/", 
+     RowBox[{"Norm", "[", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.656164268594034*^9, 3.656164337719985*^9}, {
+  3.6566382598242493`*^9, 3.656638303290125*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\nPart a)",
+ FontSize->16]], "Text",
+ CellChangeTimes->{{3.656164758907009*^9, 3.656164781610392*^9}, 
+   3.656165122531617*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"R", "=", 
+   RowBox[{"6.37", "*", 
+    RowBox[{"10", "^", "6"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"spaceship", "[", "t_", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     RowBox[{"R", "/", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "t"}], ")"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.656164795954397*^9, 3.6561648639865756`*^9}, 
+   3.65616537861474*^9, 3.656165409744878*^9, {3.6561660557552423`*^9, 
+   3.656166073182664*^9}}],
+
+Cell[TextData[{
+ StyleBox["The endpoints of curve ",
+  FontWeight->"Bold"],
+ StyleBox["C",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" start at R (the Earth\[CloseCurlyQuote]s radius ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[TildeTilde]", 
+    RowBox[{"6.37", "\[Times]", 
+     SuperscriptBox["10", "6"]}]}], TraditionalForm]],
+  FontWeight->"Bold"],
+ StyleBox["m) and end at \[Infinity].",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6561648716116743`*^9, 3.656164878314906*^9}, {
+   3.6561649512065115`*^9, 3.6561650283950777`*^9}, 3.656165159138649*^9, {
+   3.6565203352144747`*^9, 3.656520345415719*^9}, 3.656638493703478*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part b)",
+ FontSize->16]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.656165127229958*^9, 3.6561651418984094`*^9}, 
+   3.6566385093215685`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"F", "=", 
+  RowBox[{"90", "*", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"Gravy", ",", 
+     RowBox[{"spaceship", "[", "t", "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"d", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"spaceship", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"F", ".", "d"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6561651780471168`*^9, 3.6561652082385654`*^9}, {
+  3.6561652423898497`*^9, 3.656165257997977*^9}, {3.6561653021673775`*^9, 
+  3.6561653527733555`*^9}, {3.656165413129285*^9, 3.6561654410901475`*^9}, {
+  3.656165558756841*^9, 3.656165559083073*^9}, {3.656165589170458*^9, 
+  3.656165590325305*^9}, {3.6561656463381014`*^9, 3.6561656508153048`*^9}}],
+
+Cell[TextData[{
+ "The force of gravity does ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"\[TildeTilde]", 
+     RowBox[{
+      RowBox[{"-", "5.64"}], "\[Times]", 
+      SuperscriptBox["10", "9"], " ", "Joules"}]}],
+    FontWeight->"Bold"], TraditionalForm]]],
+ " of work on the 90kg TA, meaning there was a potential energy gain of ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"5.64", "\[Times]", 
+     SuperscriptBox["10", "9"], " ", "Joules"}],
+    FontWeight->"Bold"], TraditionalForm]]],
+ " as (s)he moved along that path. Also, that TA is either really muscular or \
+mildly-severely obese."
+}], "Text",
+ CellChangeTimes->{{3.6561657213104677`*^9, 3.6561659626940665`*^9}, 
+   3.656638523612723*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part c)",
+ FontSize->16]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.6561659738900356`*^9, 3.6561659786634235`*^9}, 
+   3.656638527953805*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"j", "[", "t_", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"5000", "t"}], ",", 
+     RowBox[{
+      RowBox[{"-", "7000"}], 
+      RowBox[{"t", "^", "2"}]}], ",", 
+     RowBox[{"R", "+", 
+      RowBox[{"10000", 
+       RowBox[{"t", "^", "2"}]}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"j", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"p", "=", 
+  RowBox[{"396890", "*", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"Gravy", ",", 
+     RowBox[{"j", "[", "t", "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"q", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"j", "[", "t", "]"}], ",", "t"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"p", ".", "q"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.656165987140453*^9, 3.6561660214738655`*^9}, {
+  3.656166082976652*^9, 3.6561664329024353`*^9}, {3.6561664639345026`*^9, 
+  3.6561665538344655`*^9}, {3.656166586519695*^9, 3.6561667039361715`*^9}, {
+  3.656167061588502*^9, 3.656167123224353*^9}, {3.6561671809403763`*^9, 
+  3.6561672793423643`*^9}, {3.656167415841416*^9, 3.6561674204607153`*^9}, {
+  3.65616751207887*^9, 3.6561677593551693`*^9}, {3.656167849305197*^9, 
+  3.656167849820804*^9}}],
+
+Cell[TextData[{
+ "Following the path ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"5000", "t"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "7000"}], 
+      SuperscriptBox["t", "2"]}], ",", 
+     RowBox[{
+      RowBox[{"6.37", "\[Times]", 
+       RowBox[{"10", "^", "6"}]}], "+", 
+      RowBox[{"1000", "t"}]}]}], ")"}], TraditionalForm]]],
+ ", Earth\[CloseCurlyQuote]s gravity does ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"\[TildeTilde]", 
+     RowBox[{
+      RowBox[{"-", "39"}], " ", "Gigajoules"}]}],
+    FontWeight->"Bold"], TraditionalForm]]],
+ " of work on the jetliner, meaning it gains a potential energy of about 39 \
+Gigajoules."
+}], "Text",
+ CellChangeTimes->{{3.6561674943052635`*^9, 3.656167509373927*^9}, {
+  3.656167774183509*^9, 3.656167787730559*^9}, {3.6561678576803308`*^9, 
+  3.656167922931193*^9}, {3.656521506971752*^9, 3.6565215150207663`*^9}, {
+  3.656521893586382*^9, 3.656521920623427*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell["", "Text",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.656165174668692*^9, 3.656165176205785*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Problem 3",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.6561611289940457`*^9, 3.6561611329628315`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"vec", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "x"}], ",", "z"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656563649576929*^9, 3.6565637139986897`*^9}, 
+   3.6565637479017687`*^9, 3.65663131655056*^9, {3.656631598397966*^9, 
+   3.656631699940527*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\nPart a)",
+ FontSize->16]], "Text",
+ CellChangeTimes->{{3.6565639420736976`*^9, 3.656563943117426*^9}, {
+  3.6565881869634566`*^9, 3.656588194994815*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"one", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Cos", "[", 
+     RowBox[{"Pi", " ", "t"}], "]"}], ",", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"Pi", " ", "t"}], "]"}], ",", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PathAnimate3D", "[", 
+  RowBox[{
+   RowBox[{"one", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"onef", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"vec", ",", 
+    RowBox[{"one", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"oneds", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"one", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"onef", ".", "oneds"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6565883278402443`*^9, 3.6565884154820194`*^9}, {
+  3.656588448716784*^9, 3.6565885244208603`*^9}, {3.656624101264555*^9, 
+  3.6566241628393173`*^9}, {3.6566312212029085`*^9, 3.656631302486661*^9}, {
+  3.6566313343632402`*^9, 3.6566313829576144`*^9}, {3.6566314204581447`*^9, 
+  3.6566315099639783`*^9}, {3.6566316088043165`*^9, 3.6566316091949463`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part b)",
+ FontSize->16]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.656631742560294*^9, 3.656631751654205*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"two", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], ",", 
+    RowBox[{"-", 
+     RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"4", "t"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PathAnimate3D", "[", 
+  RowBox[{
+   RowBox[{"two", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"twof", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"vec", ",", 
+    RowBox[{"two", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"twods", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"two", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"twof", ".", "twods"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.65663176085744*^9, 3.6566317672324696`*^9}, {
+  3.6566361144097896`*^9, 3.656636239258398*^9}, {3.6566370063930874`*^9, 
+  3.656637013616217*^9}, {3.656638365575563*^9, 3.6566384040978518`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part c)",
+ FontSize->16]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.6566362898823547`*^9, 3.6566362918047276`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"three", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"t", ",", "0", ",", 
+    RowBox[{
+     RowBox[{"t", "^", "2"}], "-", "1"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PathAnimate3D", "[", 
+  RowBox[{
+   RowBox[{"three", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"threef", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"vec", ",", 
+    RowBox[{"three", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"threeds", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"three", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"threef", ".", "threeds"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6566368289427657`*^9, 3.6566371638881664`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Part d)",
+ FontSize->16]], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellChangeTimes->{{3.6566371800686407`*^9, 3.656637183501092*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"four", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", "t"}], ",", 
+    RowBox[{
+     RowBox[{"E", "^", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"t", "^", "2"}]}], ")"}]}], ")"}]}], 
+     RowBox[{"Cos", "[", 
+      RowBox[{"20", "t"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"E", "^", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"t", "^", "2"}]}], ")"}]}], ")"}]}], 
+     RowBox[{"Sin", "[", 
+      RowBox[{"20", "t"}], "]"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PathAnimate3D", "[", 
+  RowBox[{
+   RowBox[{"four", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"fourf", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"vec", ",", 
+    RowBox[{"four", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"fourds", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"four", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fourint", "=", 
+   RowBox[{"fourf", ".", "fourds"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6566371900737453`*^9, 3.6566372622127924`*^9}, {
+  3.6566373536833954`*^9, 3.656637473728133*^9}}],
+
+Cell[TextData[{
+ "Approximate Integration using",
+ StyleBox[" NIntegrate", "Input"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.656637482487355*^9, 3.656637507376419*^9}, 
+   3.6566375558426185`*^9}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{"fourint", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6566375619539604`*^9, 3.65663757393647*^9}}]
+}, Closed]]
+}, Closed]]
+},
+CellGrouping->Manual,
+WindowSize->{753, 767},
+WindowMargins->{{-1, Automatic}, {Automatic, 0}},
+Magnification:>1.05 Inherited,
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 171, 3, 69, "Text"],
+Cell[CellGroupData[{
+Cell[754, 27, 224, 7, 77, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[981, 36, 1028, 29, 55, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[2012, 67, 2602, 65, 152, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4617, 134, 782, 18, 72, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[5402, 154, 1815, 59, 133, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]],
+Cell[7232, 216, 112, 2, 38, "Text"],
+Cell[CellGroupData[{
+Cell[7369, 222, 143, 5, 57, "Text"],
+Cell[7515, 229, 798, 24, 52, "Input"],
+Cell[CellGroupData[{
+Cell[8338, 257, 152, 3, 56, "Text"],
+Cell[8493, 262, 535, 15, 52, "Input"],
+Cell[9031, 279, 680, 19, 32, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9748, 303, 186, 4, 39, "Text"],
+Cell[9937, 309, 859, 20, 72, "Input"],
+Cell[10799, 331, 721, 21, 74, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[11557, 357, 186, 4, 39, "Text"],
+Cell[11746, 363, 1457, 38, 112, "Input"],
+Cell[13206, 403, 959, 28, 76, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[14192, 435, 112, 2, 38, "Text"],
+Cell[CellGroupData[{
+Cell[14329, 441, 143, 5, 57, "Text"],
+Cell[14475, 448, 383, 10, 31, "Input"],
+Cell[CellGroupData[{
+Cell[14883, 462, 179, 3, 56, "Text"],
+Cell[15065, 467, 1278, 33, 117, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[16380, 505, 156, 3, 39, "Text"],
+Cell[16539, 510, 1163, 32, 138, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[17739, 547, 160, 3, 39, "Text"],
+Cell[17902, 552, 959, 28, 117, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18898, 585, 158, 3, 39, "Text"],
+Cell[19059, 590, 1421, 45, 117, "Input"],
+Cell[20483, 637, 195, 6, 32, "Text"],
+Cell[20681, 645, 239, 6, 32, "Input"]
+}, Closed]]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

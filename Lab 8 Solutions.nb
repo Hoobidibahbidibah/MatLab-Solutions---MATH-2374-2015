@@ -1,0 +1,375 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12375,        366]
+NotebookOptionsPosition[     11109,        322]
+NotebookOutlinePosition[     11473,        338]
+CellTagsIndexPosition[     11430,        335]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 8 Problem 1, 3, 6",
+ FontSize->36]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.65555698910117*^9, 3.655556997872355*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Exercise 1",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.6555570081680517`*^9, 3.655557049797613*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Segments", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}], ",", "411", ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "Automatic"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Estimate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}], ",", "411"}], "]"}]}], "Input",\
+
+ CellChangeTimes->{{3.6555599702783995`*^9, 3.655560219515867*^9}, {
+  3.6555607654547524`*^9, 3.6555607678610334`*^9}}],
+
+Cell[TextData[{
+ "According to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", the minimum number of line segments to give an estimate of \[Pi] accurate \
+to 5 decimal places is 411 lines (it might be slightly more due to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " rounding the output to 5 decimal places). This gives the length ",
+ StyleBox["\[TildeTilde]3.14159",
+  FontWeight->"Bold"],
+ "; for comparison, an estimate with 410 lines gives \[TildeTilde]3.14158:"
+}], "Text",
+ CellChangeTimes->{{3.655557076570777*^9, 3.6555570767929573`*^9}, {
+   3.655560324782776*^9, 3.6555604529249616`*^9}, 3.6555604993005543`*^9, {
+   3.6555605338635216`*^9, 3.6555605354416275`*^9}, {3.655946139206058*^9, 
+   3.6559461409382873`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Estimate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}], ",", "410"}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.655557076570777*^9, 3.6555570767929573`*^9}, {
+  3.655560324782776*^9, 3.6555604529249616`*^9}, {3.6555604993005543`*^9, 
+  3.655560524660281*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Exercise 3",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.655557087224025*^9, 3.655557120680099*^9}, {
+  3.655557278295583*^9, 3.655557278832158*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "[", "t_", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", " ", 
+     RowBox[{
+      RowBox[{"Sin", "[", "t", "]"}], "+", 
+      RowBox[{"0.01", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"1000", "t"}], "]"}]}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ArcLength", "[", 
+  RowBox[{
+   RowBox[{"h", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "Pi"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N", "[", "%", "]"}], "/", "50"}]}], "Input",
+ CellChangeTimes->{{3.6555608893937902`*^9, 3.655561052598954*^9}, {
+   3.6555610853024683`*^9, 3.655561106037109*^9}, {3.655561242579776*^9, 
+   3.655561273986365*^9}, {3.655561308877474*^9, 3.6555613320183873`*^9}, 
+   3.6555614044567833`*^9, {3.6559457426092196`*^9, 3.6559457468672667`*^9}}],
+
+Cell["\<\
+The \[OpenCurlyDoubleQuote]ArcLength\[CloseCurlyDoubleQuote] command can\
+\[CloseCurlyQuote]t even evaluate the integral of the function, meaning that \
+the integral and exact arc length are inmpossible to calculate. Because of \
+this, Wolfram gives an estimate of 21.004 as the arc length. For the small \
+region we want to evaluate, the estimated arc length will be 21.004/50\
+\[TildeTilde]0.42. Thus we need to estimate a number of segments that will \
+give us a value close to 0.42.\
+\>", "Text",
+ CellChangeTimes->{{3.655945754091422*^9, 3.6559458753981743`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Segments", "[", 
+  RowBox[{
+   RowBox[{"h", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"Pi", "/", "50"}]}], "}"}], ",", 
+   RowBox[{"95950", "/", "50"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Estimate", "[", 
+  RowBox[{
+   RowBox[{"h", "[", "t", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"Pi", "/", "50"}]}], "}"}], ",", 
+   RowBox[{"95950", "/", "50"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6555608893937902`*^9, 3.655561052598954*^9}, {
+  3.6555610853024683`*^9, 3.655561106037109*^9}, {3.655561242579776*^9, 
+  3.655561273986365*^9}, {3.655561574331289*^9, 3.6555616801856003`*^9}, {
+  3.655945699212418*^9, 3.655945703907772*^9}, {3.6559458881520753`*^9, 
+  3.65594591013768*^9}}],
+
+Cell["\<\
+Based off these results, I am going to say that 1,919 line segments gives a \
+pretty good estimate of the small region as the estimated arc length is \
+0.402. It\[CloseCurlyQuote]s difficult to find an exact minimum value because \
+the number of segments keeps fluctuating the estimated arc length between \
+closer and farther than the original estimation. As the number of segments \
+goes towards infinity, the estimation should get closer and closer to 0.42. \
+Basically, this lab problem is terribly designed because it doesn\
+\[CloseCurlyQuote]t even work properly, acts really wonky, and can\
+\[CloseCurlyQuote]t be solved for. I am sticking with my estimate of 95,950 \
+segments being a good estimate for the arc length of the entire region due to \
+this problem being so terrible and because it keeps crashing my computer \
+whenever I try to evaluate more than that.\
+\>", "Text",
+ CellChangeTimes->{{3.6555611437094493`*^9, 3.6555611665378523`*^9}, {
+  3.655945674688919*^9, 3.6559456918721447`*^9}, {3.6559458819557056`*^9, 
+  3.6559458839901495`*^9}, {3.6559459207802525`*^9, 3.655946104085535*^9}, {
+  3.655946180821597*^9, 3.6559461858481665`*^9}, {3.655946675832939*^9, 
+  3.6559467005171275`*^9}, {3.6559504652967796`*^9, 3.6559505209196143`*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.655557124355865*^9, 3.655557124472267*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Exercise 6",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.6555572549202137`*^9, 3.65555728276025*^9}}],
+
+Cell["\<\
+(I apologize for the pretend rant at the above problem but whoever designed \
+this lab should make a lab that, oh, I don\[CloseCurlyQuote]t know... works. \
+Not even the commands worked properly at first! Oh well, maybe my humorous \
+rant above was a little distasteful and possibly a little inappropriate for \
+this lab I think? Meh, I think I\[CloseCurlyQuote]ll just leave it in as a \
+joke. I hope you at least get a kick out of it. But seriously, this lab \
+crashed my computer like 5 times before I finally gave up and went with some \
+value. So please, whoever designed this lab, don\[CloseCurlyQuote]t make \
+another lab like this one.)\
+\>", "Text",
+ CellChangeTimes->{{3.6559462818923407`*^9, 3.6559465904305882`*^9}, {
+  3.655946625930688*^9, 3.655946654580061*^9}, {3.6559504390272427`*^9, 
+  3.65595044198534*^9}, {3.655950573140687*^9, 3.6559505993140078`*^9}}],
+
+Cell[TextData[StyleBox["Okay, back to problem 6:",
+ FontSize->16]], "Text",
+ CellChangeTimes->{{3.6559506137242336`*^9, 3.6559506252154083`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"t", ",", 
+    RowBox[{"Cos", "[", "t", "]"}], ",", 
+    RowBox[{"Sin", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{
+   RowBox[{"-", "x"}], " ", "y", " ", "z"}]}]}], "Input",
+ CellChangeTimes->{{3.6559506280343895`*^9, 3.655950711175103*^9}}],
+
+Cell[TextData[{
+ "\nDerivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "t", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.655950704539178*^9, 3.6559507213103027`*^9}, 
+   3.655950793596657*^9}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.655950734078994*^9, 3.6559507421257005`*^9}, {
+  3.6559508848026814`*^9, 3.6559509034659305`*^9}, {3.6559511458037663`*^9, 
+  3.655951146274083*^9}}],
+
+Cell[TextData[{
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    RowBox[{"||", 
+     RowBox[{
+      RowBox[{"f", "'"}], 
+      RowBox[{"(", "t", ")"}]}], "||"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " shown below:"
+}], "Text",
+ CellChangeTimes->{{3.6559507637042894`*^9, 3.6559508013371506`*^9}, {
+  3.6559509231299057`*^9, 3.65595092369629*^9}, {3.6559511339843616`*^9, 
+  3.655951136148898*^9}}],
+
+Cell[BoxData[
+ RowBox[{"F", "=", 
+  RowBox[{"Norm", "[", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], ",", "t"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6559508040010386`*^9, 3.655950820273373*^9}, {
+  3.6559508688896017`*^9, 3.6559509798409004`*^9}, {3.655951015534215*^9, 
+  3.6559510252665205`*^9}, {3.6559511496154575`*^9, 3.65595116391761*^9}}],
+
+Cell[TextData[{
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"G", "=", 
+    RowBox[{"g", "(", 
+     RowBox[{"f", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " given below:"
+}], "Text",
+ CellChangeTimes->{{3.6559510885536604`*^9, 3.6559511302927427`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"G", "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"g", ",", 
+    RowBox[{"f", "[", "t", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6559511106943765`*^9, 3.6559511214124355`*^9}}],
+
+Cell["\<\
+
+Solution:\
+\>", "Text",
+ CellChangeTimes->{{3.6559510420414276`*^9, 3.655951063390582*^9}, {
+  3.6559514341376505`*^9, 3.6559514387639227`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"G", " ", "F"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6559510711941214`*^9, 3.6559510834550467`*^9}, {
+  3.655951183518493*^9, 3.6559513777045193`*^9}}],
+
+Cell[TextData[{
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox["\[Pi]", 
+     SqrtBox["2"]],
+    FontSize->24,
+    FontWeight->"Bold"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.655951443916625*^9, 3.655951483130099*^9}}]
+}, Closed]]
+},
+CellGrouping->Manual,
+WindowSize->{752, 767},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 167, 3, 66, "Text"],
+Cell[CellGroupData[{
+Cell[750, 27, 144, 5, 73, "Text"],
+Cell[897, 34, 729, 21, 52, "Input"],
+Cell[1629, 57, 746, 16, 87, "Text"],
+Cell[2378, 75, 271, 8, 31, "Input"]
+}, Closed]],
+Cell[2664, 86, 228, 4, 33, "Input"],
+Cell[CellGroupData[{
+Cell[2917, 94, 189, 6, 54, "Text"],
+Cell[3109, 102, 891, 23, 72, "Input"],
+Cell[4003, 127, 578, 9, 106, "Text"],
+Cell[4584, 138, 846, 20, 52, "Input"],
+Cell[5433, 160, 1271, 18, 182, "Text"]
+}, Closed]],
+Cell[6719, 181, 124, 2, 33, "Input"],
+Cell[CellGroupData[{
+Cell[6868, 187, 141, 5, 54, "Text"],
+Cell[7012, 194, 885, 13, 125, "Text"],
+Cell[7900, 209, 145, 2, 32, "Text"],
+Cell[8048, 213, 436, 12, 52, "Input"],
+Cell[8487, 227, 259, 9, 49, "Text"],
+Cell[8749, 238, 278, 6, 31, "Input"],
+Cell[9030, 246, 426, 14, 49, "Text"],
+Cell[9459, 262, 384, 8, 31, "Input"],
+Cell[9846, 272, 284, 10, 49, "Text"],
+Cell[10133, 284, 205, 5, 31, "Input"],
+Cell[10341, 291, 155, 5, 49, "Text"],
+Cell[10499, 298, 311, 8, 31, "Input"],
+Cell[10813, 308, 280, 11, 75, "Text"]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

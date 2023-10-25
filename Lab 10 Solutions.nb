@@ -1,0 +1,331 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10862,        322]
+NotebookOptionsPosition[      9070,        272]
+NotebookOutlinePosition[      9412,        287]
+CellTagsIndexPosition[      9369,        284]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 10 Problems 1, 3",
+ FontSize->36]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.656765568067582*^9, 3.6567655728177032`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Problem 1",
+  FontSize->18]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567655891147842`*^9, 3.6567656031774654`*^9}, 
+   3.6567688646206455`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"s_", ",", "t_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"t", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "Pi", " ", "t"}], "]"}]}], ",", " ", 
+    RowBox[{"t", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "Pi", " ", "t"}], "]"}]}], ",", " ", 
+    RowBox[{"s", " ", "*", 
+     RowBox[{"(", 
+      RowBox[{"4", "-", "t"}], ")"}]}]}], "}"}]}], "\n", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"s", ",", "t"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotPoints", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"5", ",", "200"}], "}"}]}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656766552332609*^9, 3.6567665687514415`*^9}, 
+   3.6567688646206455`*^9, {3.656768902279393*^9, 3.6567689300271025`*^9}}],
+
+Cell["\<\
+Partial Derivatives, Cross Product, and Norm of Cross Product:\
+\>", "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.65676649411316*^9, 3.656766499441354*^9}, {
+   3.656768117600537*^9, 3.6567681207087383`*^9}, {3.656768537724884*^9, 
+   3.65676854731269*^9}, 3.6567688646206455`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"g", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"s", ",", "t"}], "]"}], ",", "s"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"h", "=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"s", ",", "t"}], "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Cross", "[", 
+   RowBox[{"g", ",", "h"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"m", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Norm", "[", 
+    RowBox[{"Cross", "[", 
+     RowBox[{"g", ",", "h"}], "]"}], "]"}], "]"}]}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567665023163447`*^9, 3.6567665401606216`*^9}, {
+   3.6567681235707445`*^9, 3.6567682577990875`*^9}, {3.6567685231875563`*^9, 
+   3.6567685626866293`*^9}, 3.6567688646206455`*^9}],
+
+Cell["\<\
+Since we\[CloseCurlyQuote]re finding the surface area of the function, that \
+essentially means the density function is just 1. This means we only need to \
+take the integral of the norm of the cross product of the partial derivatives:\
+\>", "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567684396912975`*^9, 3.6567685123398504`*^9}, 
+   3.6567688646206455`*^9, {3.6567690005601645`*^9, 3.656769001679994*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{"m", ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567685791843424`*^9, 3.656768580571314*^9}, {
+   3.656768625882496*^9, 3.656768677799369*^9}, {3.6567687468203917`*^9, 
+   3.656768747581932*^9}, 3.6567688646206455`*^9}],
+
+Cell["Numerical Approximation of Surface Area:", "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656768755706706*^9, 3.6567687678914084`*^9}, 
+   3.656768864621647*^9}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", "%", "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567687702930636`*^9, 3.656768771948239*^9}, 
+   3.656768864621647*^9}],
+
+Cell[TextData[{
+ "Approximate Value of Surface Area using ",
+ StyleBox["NIntegrate", "Input"],
+ ":"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656768774912347*^9, 3.6567688286120706`*^9}, 
+   3.656768864621647*^9}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{"m", ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567688320675244`*^9, 3.656768864621647*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.656765617450384*^9, 3.6567656248411484`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Problem 3",
+  FontSize->18]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567656391382165`*^9, 3.656765642794516*^9}, 
+   3.6567688768343215`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"s_", ",", "t_"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "t", ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "s", "]"}], 
+      RowBox[{"Cos", "[", "t", "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"G", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", "x"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"s", ",", "t"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", "\"\<y\>\"", ",", "\"\<z\>\""}], "}"}]}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", "White", "}"}]}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.656766663174469*^9, 3.6567667044094276`*^9}, {
+   3.6567667818065405`*^9, 3.6567667858222704`*^9}, {3.656766825135275*^9, 
+   3.6567668309009724`*^9}, {3.6567668687139053`*^9, 
+   3.6567669598400965`*^9}, {3.6567669991375065`*^9, 
+   3.6567672792824836`*^9}, {3.656767365205515*^9, 3.656767401127847*^9}, {
+   3.6567675610829887`*^9, 3.6567675710362744`*^9}, {3.6567677362296133`*^9, 
+   3.656767785858863*^9}, {3.6567679808213377`*^9, 3.6567680518608074`*^9}, 
+   3.6567688768343215`*^9, {3.6567689434086075`*^9, 3.656768954480489*^9}}],
+
+Cell[TextData[{
+ "Setup of ",
+ Cell[BoxData[
+  RowBox[{"\[Integral]", 
+   RowBox[{
+    SubscriptBox["\[Integral]", "M"], 
+    RowBox[{"g", " ", 
+     RowBox[{"\[DifferentialD]", "S"}]}]}]}]],
+  FontSize->14],
+ ":"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567680751423283`*^9, 3.6567680977284203`*^9}, 
+   3.6567688768343215`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"G", ",", 
+     RowBox[{"F", "[", 
+      RowBox[{"s", ",", "t"}], "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"Norm", "[", 
+    RowBox[{"Cross", "[", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"s", ",", "t"}], "]"}], ",", "s"}], "]"}], ",", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"s", ",", "t"}], "]"}], ",", "t"}], "]"}]}], "]"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{3.6567688768343215`*^9}],
+
+Cell["Approximate Integration:", "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{
+  3.6567668318228273`*^9, {3.656767405721601*^9, 3.656767415534283*^9}, 
+   3.656768876835322*^9}],
+
+Cell[BoxData[{
+ RowBox[{"a", "*", "b"}], "\[IndentingNewLine]", 
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   RowBox[{"a", "*", "b"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6567674166436176`*^9, 3.656767541895282*^9}, {
+   3.656767685303442*^9, 3.6567677077173815`*^9}, 3.656768876835322*^9}]
+}, Closed]]
+},
+WindowSize->{752, 766},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 169, 3, 66, "Text"],
+Cell[CellGroupData[{
+Cell[752, 27, 226, 7, 73, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[981, 36, 1041, 29, 72, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[2025, 67, 329, 6, 30, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[2357, 75, 875, 24, 92, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[3235, 101, 458, 7, 68, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[3696, 110, 460, 10, 31, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4159, 122, 203, 3, 30, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4365, 127, 201, 4, 31, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4569, 133, 258, 7, 31, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4830, 142, 335, 8, 31, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]],
+Cell[5180, 153, 124, 2, 35, "Input"],
+Cell[CellGroupData[{
+Cell[5329, 159, 222, 7, 54, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[5554, 168, 1677, 41, 112, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[7234, 211, 376, 13, 37, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[7613, 226, 693, 22, 52, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[8309, 250, 212, 4, 30, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[8524, 256, 530, 13, 52, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

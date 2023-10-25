@@ -1,0 +1,506 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14851,        497]
+NotebookOptionsPosition[     13315,        447]
+NotebookOutlinePosition[     13682,        463]
+CellTagsIndexPosition[     13639,        460]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 12 Problem 1 & 3:",
+ FontSize->36]], "Text",
+ CellFrame->{{0, 0}, {3, 0}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Exercise 1:",
+  FontSize->24]
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"func", "=", 
+  RowBox[{"ContourPlot3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], "\[Equal]", "1"}], ",", 
+      RowBox[{"z", "\[Equal]", 
+       RowBox[{
+        RowBox[{"y", "^", "2"}], "-", 
+        RowBox[{"x", "^", "2"}]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+    RowBox[{"ContourStyle", "\[Rule]", 
+     RowBox[{"Opacity", "[", "0.8", "]"}]}]}], "]"}]}]], "Input"],
+
+Cell["\<\
+Parametrization of the curve C which denotes the intersection:\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"line", "[", "t_", "]"}], "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", "t", "]"}], "^", "2"}], "-", 
+      RowBox[{
+       RowBox[{"Cos", "[", "t", "]"}], "^", "2"}]}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ln", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"line", "[", "t", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Black"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"ln", ",", "func"}], "]"}]}], "Input"],
+
+Cell["Surface with the same boundaries as curve C:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"r_", ",", "t_"}], "]"}], "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"r", "*", 
+         RowBox[{"Sin", "[", "t", "]"}]}], ")"}], "^", "2"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"r", "*", 
+         RowBox[{"Cos", "[", "t", "]"}]}], ")"}], "^", "2"}]}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"surf", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"r", ",", "t"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"ln", ",", "surf"}], "]"}]}], "Input"],
+
+Cell["\<\
+Now we define the vector field F and find the curl of it. Then, we apply it \
+to the surface parametrization:\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"F", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "*", "y"}], ",", 
+    RowBox[{
+     RowBox[{"x", "^", "3"}], "/", "3"}], ",", 
+    RowBox[{"x", "*", "y"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"curl", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"Curl", "[", 
+   RowBox[{"F", "[", 
+    RowBox[{"x", ",", "y", ",", "z"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"app", "[", 
+   RowBox[{"r_", ",", "t_"}], "]"}], "=", 
+  RowBox[{"Apply", "[", 
+   RowBox[{"curl", ",", 
+    RowBox[{"f", "[", 
+     RowBox[{"r", ",", "t"}], "]"}]}], "]"}]}]}], "Input"],
+
+Cell["\<\
+Taking the cross product of the partial derivatives of the surface \
+parametrization, we find the normal:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"part", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Cross", "[", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"r", ",", "t"}], "]"}], ",", "r"}], "]"}], ",", 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"r", ",", "t"}], "]"}], ",", "t"}], "]"}]}], "]"}], 
+   "]"}]}]], "Input"],
+
+Cell["Now we dot the results and integrate:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"app", "[", 
+     RowBox[{"r", ",", "t"}], "]"}], ".", "part"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["\<\
+Now we can double check the result by taking the line integral directly. \
+First we apply the function F to the parametrized curve C we found earlier, \
+dot it with the derivative of C, and then integrate:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Apply", "[", 
+     RowBox[{"F", ",", 
+      RowBox[{"line", "[", "t", "]"}]}], "]"}], ".", 
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"line", "[", "t", "]"}], ",", "t"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Thus, we have just verified Stokes\[CloseCurlyQuote] theorem for the \
+function along the boundary curve. As the problem shows, taking the surface \
+integral of the curl of vector field along a surface whose boundary is the \
+cuve C yields the same result if we were to take the line integral of the \
+function along the curve C directly (",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "S"], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Del]", "\[Cross]", "F"}], ")"}], "\[CenterDot]", 
+        "dS"}]}]}], "=", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "\[Delta]S"], 
+      RowBox[{"F", "\[CenterDot]", "ds"}]}]}], "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "). So the curl of the vector field on the surface is the same as the force \
+along the curve which gives the result of ",
+ StyleBox["\[Pi]",
+  FontWeight->"Bold"],
+ "."
+}], "Text"]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.6570527551595817`*^9, 3.657052755314725*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Exercise 3:",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.6570527629430914`*^9, 3.657052767366284*^9}, 
+   3.65705341705503*^9, 3.6573776150008664`*^9, 3.657396761396661*^9}],
+
+Cell["Define and graph the curve C:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", "[", "t_", "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], ",", 
+    RowBox[{"Cos", "[", "t", "]"}], ",", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "t"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"curve", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"c", "[", "t", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Gray"}]}], "]"}]}]}], "Input"],
+
+Cell["Now we can find a surface with the boundary of the curve C:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s", "[", 
+   RowBox[{"r_", ",", "t_"}], "]"}], "=", 
+  RowBox[{"r", "*", 
+   RowBox[{"c", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plane", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"s", "[", 
+     RowBox[{"r", ",", "t"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"White", ",", 
+       RowBox[{"Opacity", "[", "0.8", "]"}]}], "}"}]}]}], "]"}]}]}], "Input"],
+
+Cell["Now we define the vector field F and find its curl:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"F", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "+", 
+     RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"z", "^", "2"}], "+", 
+     RowBox[{"Cos", "[", "y", "]"}]}], ",", 
+    RowBox[{"x", "^", "3"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Fcurl", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"Curl", "[", 
+   RowBox[{"G", "[", 
+    RowBox[{"x", ",", "y", ",", "z"}], "]"}], "]"}]}]}], "Input"],
+
+Cell[TextData[{
+ "Stokes\[CloseCurlyQuote] Theorem states that ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       SubscriptBox["\[Integral]", "S"], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Del]", "\[Cross]", "F"}], ")"}], "\[CenterDot]", 
+        "dS"}]}]}], "=", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "\[Delta]S"], 
+      RowBox[{"F", "\[CenterDot]", "ds"}]}]}], "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":\nWe can start by trying to take the line integral. However, once we apply \
+the function F to the parametrized curve, we end up with a messy result. It \
+gets even messier when we dot it with the derivative of the curve C:"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FCapp", "[", "t_", "]"}], "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"G", ",", 
+     RowBox[{"c", "[", "t", "]"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"c", "[", "t", "]"}], ",", "t"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   RowBox[{"FCapp", "[", "t", "]"}], ".", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"c", "[", "t", "]"}], ",", "t"}], "]"}]}], "]"}]}], "Input"],
+
+Cell[TextData[{
+ "Though ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " is able to compute this integral easily, it would be very difficult to \
+calculate it by hand. So we can use Stokes\[CloseCurlyQuote] Theorem to \
+instead find the curl of the surface whose boundary is the curve C. For \
+verification purposes, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " computes the integral below, yielding the result ",
+ StyleBox["\[Pi] ",
+  FontWeight->"Bold"],
+ "(though it does take a little bit for it to calculate):"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"FCapp", "[", "t", "]"}], ".", 
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"c", "[", "t", "]"}], ",", "t"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["\<\
+So now we set up the surface integral, applying the curl of F to the curve C \
+and finding the cross product of the partial derivatives of C then dotting \
+the results:\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FSapp", "[", 
+   RowBox[{"r_", ",", "t_"}], "]"}], "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"Fcurl", ",", 
+     RowBox[{"s", "[", 
+      RowBox[{"r", ",", "t"}], "]"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"vec", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Cross", "[", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"s", "[", 
+        RowBox[{"r", ",", "t"}], "]"}], ",", "r"}], "]"}], ",", 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"s", "[", 
+        RowBox[{"r", ",", "t"}], "]"}], ",", "t"}], "]"}]}], "]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"int", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{
+    RowBox[{"FSapp", "[", 
+     RowBox[{"r", ",", "t"}], "]"}], ".", "vec"}], "]"}]}]}], "Input"],
+
+Cell[TextData[{
+ "The result looks somewhat neater than when we were setting up the line \
+integral. This result seems easier to calculate by hand (and ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " is able to compute it quicker than the line integral). Computing the \
+integral, we get the same result of ",
+ StyleBox["\[Pi] ",
+  FontWeight->"Bold"],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{"int", ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["So Stokes\[CloseCurlyQuote] Theorem once again holds.", "Text"]
+}, Closed]]
+},
+CellGrouping->Manual,
+WindowSize->{1536, 783},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 102, 2, 66, "Text"],
+Cell[CellGroupData[{
+Cell[685, 26, 77, 4, 79, "Text"],
+Cell[765, 32, 866, 26, 31, "Input"],
+Cell[1634, 60, 86, 2, 30, "Text"],
+Cell[1723, 64, 774, 24, 72, "Input"],
+Cell[2500, 90, 60, 0, 30, "Text"],
+Cell[2563, 92, 1106, 34, 72, "Input"],
+Cell[3672, 128, 133, 3, 30, "Text"],
+Cell[3808, 133, 734, 23, 72, "Input"],
+Cell[4545, 158, 129, 3, 30, "Text"],
+Cell[4677, 163, 389, 13, 31, "Input"],
+Cell[5069, 178, 53, 0, 30, "Text"],
+Cell[5125, 180, 320, 10, 31, "Input"],
+Cell[5448, 192, 229, 4, 30, "Text"],
+Cell[5680, 198, 376, 12, 31, "Input"],
+Cell[6059, 212, 987, 26, 53, "Text"]
+}, Closed]],
+Cell[7061, 241, 124, 2, 35, "Input"],
+Cell[CellGroupData[{
+Cell[7210, 247, 214, 6, 60, "Text"],
+Cell[7427, 255, 45, 0, 30, "Text"],
+Cell[7475, 257, 541, 16, 52, "Input"],
+Cell[8019, 275, 75, 0, 30, "Text"],
+Cell[8097, 277, 684, 20, 52, "Input"],
+Cell[8784, 299, 67, 0, 30, "Text"],
+Cell[8854, 301, 554, 17, 52, "Input"],
+Cell[9411, 320, 750, 20, 53, "Text"],
+Cell[10164, 342, 558, 17, 72, "Input"],
+Cell[10725, 361, 544, 14, 49, "Text"],
+Cell[11272, 377, 312, 10, 31, "Input"],
+Cell[11587, 389, 192, 4, 30, "Text"],
+Cell[11782, 395, 826, 26, 72, "Input"],
+Cell[12611, 423, 376, 10, 49, "Text"],
+Cell[12990, 435, 237, 7, 31, "Input"],
+Cell[13230, 444, 69, 0, 30, "Text"]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

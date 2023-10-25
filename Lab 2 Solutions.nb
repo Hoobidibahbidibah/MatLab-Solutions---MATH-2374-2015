@@ -1,0 +1,629 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17712,        620]
+NotebookOptionsPosition[     17052,        596]
+NotebookOutlinePosition[     17395,        611]
+CellTagsIndexPosition[     17352,        608]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 2 Exercises 3 & 4",
+ FontSize->24]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.651927033409045*^9, 3.65192704633733*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6519270699981003`*^9, 3.65192708601854*^9}}],
+
+Cell["Exercise 3", "Text",
+ CellChangeTimes->{{3.651927076929083*^9, 3.651927132585246*^9}, {
+  3.651927282329597*^9, 3.6519272836654673`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"problem", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["x", "3"], "-", 
+        SuperscriptBox["y", "3"]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", 
+        SuperscriptBox["y", "2"]}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "problem", "]"}]}], "Input",
+ CellChangeTimes->{{3.651927304181031*^9, 3.6519273992843924`*^9}, {
+  3.651929935736825*^9, 3.651929956792368*^9}}],
+
+Cell[TextData[{
+ "First start out finding the partial derivative with respect to",
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " using the definition ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["f", "x"], "(", 
+    RowBox[{
+     SubscriptBox["x", "0"], ",", 
+     SubscriptBox["y", "0"]}], ")"}], TraditionalForm]],
+  FontWeight->"Plain"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]],
+  FontWeight->"Plain"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{"f", "(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["x", "0"], "+", "h"}], ",", 
+       SubscriptBox["y", "0"]}], ")"}], "-", 
+     RowBox[{"f", "(", 
+      RowBox[{
+       SubscriptBox["x", "0"], ",", 
+       SubscriptBox["y", "0"]}], ")"}]}], "h"], TraditionalForm]],
+  FontWeight->"Plain"],
+ "Since the derivative is being taken at the origin, it makes it easier to \
+plug in the numbers for the variables: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "0"}], TraditionalForm]],
+  FontWeight->"Plain"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "0"], "=", "0"}], TraditionalForm]],
+  FontWeight->"Plain"],
+ ". Thus the equation becomes: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["f", "x"], "(", 
+    RowBox[{"0", ",", "0"}], ")"}], TraditionalForm]],
+  FontWeight->"Plain"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]],
+  FontWeight->"Plain"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{"f", "(", 
+      RowBox[{
+       RowBox[{"0", "+", "h"}], ",", "0"}], ")"}], "-", 
+     RowBox[{"f", "(", 
+      RowBox[{"0", ",", "0"}], ")"}]}], "h"], TraditionalForm]],
+  FontWeight->"Plain"],
+ " Now, f(0+h,0) = f(h,0) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["h", "3"], "-", "0"}], 
+     RowBox[{
+      SuperscriptBox["h", "2"], "+", "y"}]], " ", "=", " ", 
+    FractionBox[
+     SuperscriptBox["h", "3"], 
+     SuperscriptBox["h", "2"]]}], TraditionalForm]],
+  FontWeight->"Plain"],
+ " and f(0,0) = 0. So now we take ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     FractionBox[
+      SuperscriptBox["h", "3"], 
+      SuperscriptBox["h", "2"]], "h"], " ", "=", " ", 
+    FractionBox[
+     SuperscriptBox["h", "3"], 
+     SuperscriptBox["h", "3"]]}], TraditionalForm]]],
+ "but since that ends up being ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["0", "0"], TraditionalForm]]],
+ "use L\[CloseCurlyQuote]Hopital\[CloseCurlyQuote]s Rule: ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["h", "3"], 
+     SuperscriptBox["h", "3"]], " ", "="}], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"3", 
+     SuperscriptBox["h", "2"]}], 
+    RowBox[{"3", 
+     SuperscriptBox["h", "2"]}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   UnderscriptBox["lim", 
+    RowBox[{"h", "\[Rule]", "0"}]], TraditionalForm]]],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"6", "h"}], 
+    RowBox[{"6", "h"}]], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["6", "6"], TraditionalForm]]],
+ " = 1. Thus",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "'"}], "=", "1"}], TraditionalForm]]],
+ ". Following the same steps with the partial derivative with respect to",
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox["y, ",
+  FontSlant->"Italic"],
+ "we end up with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "'"}], "=", 
+    RowBox[{"-", "1"}]}], TraditionalForm]]],
+ ". Thus by the Linear Approximation Theorem ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"L", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"f", 
+      RowBox[{"(", 
+       RowBox[{"a", ",", "b"}], ")"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "'"}], ",", 
+        RowBox[{"y", "'"}]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "-", 
+         SubscriptBox["x", "0"]}], ",", 
+        RowBox[{"y", "-", 
+         SubscriptBox["y", "0"]}]}], ")"}]}]}]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"L", "(", 
+     RowBox[{"0", ",", "0"}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"0", "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", ",", 
+         RowBox[{"-", "1"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"x", "-", "0"}], ",", 
+         RowBox[{"y", "-", "0"}]}], ")"}]}]}], "=", 
+     RowBox[{"x", "-", "y"}]}]}], TraditionalForm]]],
+ " thus proving that if there were a tangent plane at the origin, it would \
+have to be ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", 
+    RowBox[{"x", "-", "y"}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.651927416916554*^9, 3.65192742128131*^9}, {
+  3.65192794035433*^9, 3.651927970578418*^9}, {3.6519280443946667`*^9, 
+  3.651928077100305*^9}, {3.6519281182982893`*^9, 3.651928405485358*^9}, {
+  3.651928437029682*^9, 3.65192853575406*^9}, {3.651928568629826*^9, 
+  3.651928783262382*^9}, {3.651928820549877*^9, 3.651928832357676*^9}, {
+  3.651928884702569*^9, 3.651928929885262*^9}, {3.6519290214542294`*^9, 
+  3.651929285926969*^9}, {3.651929607039608*^9, 3.651929808901235*^9}, {
+  3.6519298481412697`*^9, 3.651929909760416*^9}, {3.651929972237734*^9, 
+  3.651929976127838*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tangent", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{"x", "-", "y"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"ViewPoint", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"problem", ",", "tangent", ",", 
+   RowBox[{"BoxRatios", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1", ",", "2"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.651929981279997*^9, 3.651930074135635*^9}, {
+  3.6519301701546307`*^9, 3.6519301795058002`*^9}, {3.651930211449847*^9, 
+  3.651930230074266*^9}, {3.6523875541898575`*^9, 3.6523875704869256`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.652387582715836*^9, 3.652387584543928*^9}, 
+   3.6523979004420547`*^9}],
+
+Cell[TextData[{
+ "If we restrict the line to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "so the function is now ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"0", ",", "y"}], ")"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"0", "-", 
+       SuperscriptBox["y", "3"]}], 
+      RowBox[{"0", "+", 
+       SuperscriptBox["y", "2"]}]], "=", 
+     RowBox[{"-", "y"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "(", 
+    RowBox[{"0", ",", "y"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " becomes ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", 
+    RowBox[{
+     RowBox[{"0", "-", "y"}], "=", 
+     RowBox[{"-", "y"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Plotted together on a 2D plane they are the exact same line. The same \
+thing happens when the line is restricted to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "; ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", "0"}], ")"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["x", "3"], "-", "0"}], 
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", "0"}]], "=", "x"}]}], TraditionalForm]],
+  
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"L", "(", 
+      RowBox[{"x", ",", "0"}], ")"}], "\[Rule]", "z"}], "=", 
+    RowBox[{
+     RowBox[{"x", "-", "0"}], "=", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Let\[CloseCurlyQuote]s see what happens when the line is restricted to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"-", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "x"}]}], ")"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["x", "3"], "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", "x"}], ")"}], "3"]}], 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", "x"}], ")"}], "2"]}]], "=", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", 
+        SuperscriptBox["x", "3"]}], 
+       RowBox[{"2", 
+        SuperscriptBox["x", "2"]}]], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", " ", "and", " ", 
+         RowBox[{"L", "(", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "x"}]}], ")"}]}], "\[Rule]", "z"}], "=", 
+       RowBox[{
+        RowBox[{"x", "-", 
+         RowBox[{"(", 
+          RowBox[{"-", "x"}], ")"}]}], "=", 
+        RowBox[{"2", "x"}]}]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " which is ",
+ StyleBox["not ",
+  FontWeight->"Bold"],
+ "tangent to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "x"}]}], ")"}], "=", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " meaning by definition that since ",
+ StyleBox["L ",
+  FontSlant->"Italic"],
+ "fails to be tangent to ",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ "at this line, ",
+ StyleBox["L ",
+  FontSlant->"Italic"],
+ "is not tangent to ",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ "in all of 3D Space. Despite this, by Theorem 9 in the textbook referring to \
+the definition of differentiability (the \
+\[OpenCurlyDoubleQuote]Differentiability Theorem\[CloseCurlyDoubleQuote]), \
+since ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    RowBox[{"x", ",", "y"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is continuous at every point except for (x,y)=(0,0), the partial \
+derivatives ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["Dz", "Dx"], 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "0"}], ")"}], " ", "and", " ", 
+    FractionBox["Dz", "Dy"], 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "0"}], ")"}], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "exist and are continuous in the neighborhood of (x,y)=(0,0), the function \
+",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ "still meets the criteria for the Differentiability Theorem meaning that ",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ "is by definition differentiable."
+}], "Text",
+ CellChangeTimes->{{3.6523911146486254`*^9, 3.6523912394262047`*^9}, {
+  3.652391456022721*^9, 3.6523918116607265`*^9}, {3.6523927869136515`*^9, 
+  3.6523928607032986`*^9}, {3.652393044033654*^9, 3.6523931516515126`*^9}, {
+  3.652393197464566*^9, 3.6523933504829226`*^9}, {3.6523970966110306`*^9, 
+  3.6523971124801035`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {2, 0}},
+ CellChangeTimes->{{3.6523933918436985`*^9, 3.652393401421995*^9}}],
+
+Cell["\<\
+
+Exercise 4\
+\>", "Text",
+ CellChangeTimes->{{3.6523934043438673`*^9, 3.6523934317661057`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox["y", "2"], 
+    RowBox[{"Log", "[", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"BoxRatios", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2", ",", "1"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.652394446545703*^9, 3.6523945404853907`*^9}, {
+  3.652394623331156*^9, 3.6523946336750093`*^9}}],
+
+Cell[TextData[{
+ "Partial Derivative with Respect to ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ ": ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["yx", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["y", "2"], "+", 
+       SuperscriptBox["x", "2"]}], ")"}], 
+     RowBox[{"ln", "(", "10", ")"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nPartial Derivative with Respect to ",
+ StyleBox["y",
+  FontSlant->"Italic"],
+ ": ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"log", "(", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}], ")"}], "2"], "+", 
+    FractionBox[
+     SuperscriptBox["y", "2"], 
+     RowBox[{
+      RowBox[{"ln", "(", "10", ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", 
+        SuperscriptBox["y", "2"]}], ")"}]}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nPartial-",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " at (0,0): 0\nPartial-",
+ StyleBox["y",
+  FontSlant->"Italic"],
+ " at (0,0): ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"log", "(", 
+      SuperscriptBox["y", "2"], ")"}], "2"], "+", 
+    FractionBox["1", 
+     RowBox[{"ln", "(", "10", ")"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nAs the partial derivatives show, ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ " is not differentiable by the Differentiability Theorem. Though ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["Dz", "Dx"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is continuous for all of 3D Space, ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["Dz", "Dy"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is not. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["Dz", "Dy"], 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "0"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " has an asymptote along the ",
+ StyleBox["y-",
+  FontSlant->"Italic"],
+ "axis towards negative infinity, meaning that it is not continuous at the \
+neighborhood of (x,y)=(0,0) thus ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ " does not meet the criteria of the Differentiablility Theorem and is \
+therefore not differentiable."
+}], "Text",
+ CellChangeTimes->{{3.65239459698339*^9, 3.652394621393611*^9}, {
+  3.6523949678749814`*^9, 3.6523950047037954`*^9}, {3.6523951751652822`*^9, 
+  3.6523952229002285`*^9}, {3.6523953181758432`*^9, 3.652395642027758*^9}, {
+  3.6523961991132565`*^9, 3.6523963640662766`*^9}, {3.6523967017431836`*^9, 
+  3.652396776614189*^9}, {3.6523972899885283`*^9, 3.652397369843154*^9}}]
+},
+WindowSize->{1536, 783},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 167, 3, 52, "Text"],
+Cell[728, 25, 93, 1, 31, "Input"],
+Cell[824, 28, 143, 2, 30, "Text"],
+Cell[970, 32, 819, 24, 54, "Input"],
+Cell[1792, 58, 5956, 219, 147, "Text"],
+Cell[7751, 279, 880, 23, 52, "Input"],
+Cell[8634, 304, 120, 2, 31, "Input"],
+Cell[8757, 308, 4797, 166, 156, "Text"],
+Cell[13557, 476, 124, 2, 41, "Input"],
+Cell[13684, 480, 105, 4, 49, "Text"],
+Cell[13792, 486, 636, 19, 44, "Input"],
+Cell[14431, 507, 2617, 87, 195, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

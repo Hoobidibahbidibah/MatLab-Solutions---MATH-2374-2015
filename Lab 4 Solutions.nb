@@ -1,0 +1,420 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14845,        411]
+NotebookOptionsPosition[     13404,        369]
+NotebookOutlinePosition[     13747,        384]
+CellTagsIndexPosition[     13704,        381]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 4 Exercise 2 & 4",
+ FontSize->48]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.653135110761754*^9, 3.6531351201182003`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Exercise 2",
+  FontSize->18]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653135131574238*^9, 3.65313513700635*^9}, 
+   3.653137333877181*^9, 3.653137435617897*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"T", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+   RowBox[{"6000", "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"x", "^", "2"}], "+", 
+         RowBox[{"y", "^", "2"}], "+", 
+         RowBox[{"z", "^", "2"}]}], ")"}], "/", "5"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{"T", "[", 
+    RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+   RowBox[{"ContourStyle", "\[Rule]", "Yellow"}]}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6531351587928877`*^9, 3.653135319740054*^9}, {
+   3.6531353669886303`*^9, 3.653135577374671*^9}, {3.653135619017138*^9, 
+   3.653135639616117*^9}, {3.653135701448748*^9, 3.653135722071416*^9}, {
+   3.653135781409618*^9, 3.653135955144753*^9}, {3.653136036465067*^9, 
+   3.653136213801811*^9}, {3.653136273331111*^9, 3.653136275706299*^9}, {
+   3.653136899332569*^9, 3.653136903619494*^9}, {3.653136935149399*^9, 
+   3.653136935508664*^9}, 3.6531373338773403`*^9, {3.65350790973662*^9, 
+   3.6535079777644634`*^9}, {3.6535080307900586`*^9, 
+   3.6535080399715633`*^9}, {3.6535080950669727`*^9, 3.653508106294934*^9}, {
+   3.653508353801429*^9, 3.653508405374296*^9}, {3.6535084445357676`*^9, 
+   3.653508447310706*^9}, {3.6535084962010965`*^9, 3.6535084995394664`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"temp", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], "=", 
+  RowBox[{"Grad", "[", 
+   RowBox[{
+    RowBox[{"T", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"temp", "[", 
+  RowBox[{"4", ",", 
+   RowBox[{"-", "2"}], ",", "8"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"u", "=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "4"}], ",", "3", ",", "7"}], "}"}], "/", 
+   RowBox[{"Norm", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "4"}], ",", "3", ",", "7"}], "}"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Dot", "[", 
+  RowBox[{
+   RowBox[{"temp", "[", 
+    RowBox[{"4", ",", 
+     RowBox[{"-", "2"}], ",", "8"}], "]"}], ",", "u"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6531362350738707`*^9, 3.653136265423958*^9}, {
+   3.653136334431356*^9, 3.653136382159955*^9}, {3.653136469046109*^9, 
+   3.653136542000684*^9}, {3.6531365823460903`*^9, 3.653136731915969*^9}, 
+   3.653137333877548*^9, {3.653138914050755*^9, 3.65313892020968*^9}}],
+
+Cell[TextData[{
+ "Using the Directional Derivative to solve the problem, the spaceship \
+experiences an inital decrease in temperature of about 30K. This value also \
+shows that the temperature decreases by about 30",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["K", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " on average on the spaceship\[CloseCurlyQuote]s journey from (4,-2,8) to \
+(-4,3,7)."
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653137078528327*^9, 3.6531371154005938`*^9}, {
+   3.653137154585251*^9, 3.6531372543054543`*^9}, {3.65313730724172*^9, 
+   3.6531373338779697`*^9}, 3.6531373649695673`*^9, {3.6534897944031897`*^9, 
+   3.65348988347388*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.65313737760632*^9, 3.653137378699193*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\nExercise 4",
+ FontSize->18]], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653137283353252*^9, 3.6531372884171762`*^9}, {
+   3.653137396617814*^9, 3.653137416881893*^9}, 3.6535085251596375`*^9}],
+
+Cell[TextData[{
+ "Going back to Exercise 2, now we want to find the direction the spaceship \
+should travel to decrease the temperature as quickly as possible. Since it is \
+now known that the largest increase of the Directional Derivative is in the \
+direction of the gradient, it can be assumed that the direction of the \
+largest decrease is in the opposite of the gradient. This is also shown by \
+the equation of the Directional Derivative: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["D", 
+      OverscriptBox["u", "\[RightVector]"]], 
+     RowBox[{"f", "(", "a", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       OverscriptBox["\[Del]", "\[RightVector]"], 
+       RowBox[{"f", "(", "a", ")"}]}], "\[CenterDot]", 
+      OverscriptBox["u", "\[RightVector]"]}], "=", 
+     RowBox[{"||", 
+      RowBox[{
+       OverscriptBox["\[Del]", "\[RightVector]"], 
+       RowBox[{"f", "(", "a", ")"}]}], "||", "||", 
+      OverscriptBox["u", "\[RightVector]"], "||", "cos\[Theta]"}]}]}], 
+   TraditionalForm]]],
+ " when \[Theta]=0, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     OverscriptBox["u", "\[RightVector]"], "||"}], "=", 
+    RowBox[{"||", 
+     RowBox[{
+      OverscriptBox["\[Del]", "\[RightVector]"], 
+      RowBox[{"f", "(", "a", ")"}]}], "||"}]}], TraditionalForm]]],
+ " and cos\[Theta]=1 (the largest possible value). cos\[Theta]=-1 when \
+\[Theta]=180 which means ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     OverscriptBox["u", "\[RightVector]"], "||"}], "=", 
+    RowBox[{"-", 
+     RowBox[{"||", 
+      RowBox[{
+       OverscriptBox["\[Del]", "\[RightVector]"], 
+       RowBox[{"f", "(", "a", ")"}]}], "||"}]}]}], TraditionalForm]]],
+ ". Thus, we solve for the opposite of the gradient over its norm at the \
+point (4,-2,8):"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653138787469387*^9, 3.653138906623207*^9}, {
+   3.6531389454790907`*^9, 3.653139024730709*^9}, {3.653139057226823*^9, 
+   3.653139136819704*^9}, {3.6531391784868937`*^9, 3.653139453683758*^9}, {
+   3.653139564748618*^9, 3.653139643441111*^9}, 3.6535085251596375`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"a", "=", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"temp", "[", 
+     RowBox[{"4", ",", 
+      RowBox[{"-", "2"}], ",", "8"}], "]"}]}], "/", 
+   RowBox[{"Norm", "[", 
+    RowBox[{"temp", "[", 
+     RowBox[{"4", ",", 
+      RowBox[{"-", "2"}], ",", "8"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Dot", "[", 
+  RowBox[{
+   RowBox[{"temp", "[", 
+    RowBox[{"4", ",", 
+     RowBox[{"-", "2"}], ",", "8"}], "]"}], ",", "a"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653139437454193*^9, 3.653139479445224*^9}, {
+   3.653139688856262*^9, 3.653139689062497*^9}, 3.6531398354083347`*^9, {
+   3.6533978649100475`*^9, 3.6533979867464867`*^9}, {3.653398493139885*^9, 
+   3.65339855334962*^9}, 3.653489725122921*^9, 3.6534897634301214`*^9, 
+   3.6535085251596375`*^9}],
+
+Cell[TextData[{
+ "This gives the unit vector direction in which the spaceship should travel \
+in order to decrease its temperature the fastest. This shows that the \
+spaceship should move towards the point (2,-1,4). As the spaceship travels in \
+this direction it experiences a drop of \[TildeTilde]69.42K meaning it \
+experiences an average change of -69.42",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["K", "m"], TraditionalForm]]],
+ ".\n\nNow, in order for the spaceship to keep the temperature constant it \
+must travel along the same isothermic field. Looking back at the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["D", 
+      OverscriptBox["u", "\[RightVector]"]], 
+     RowBox[{"f", "(", "a", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       OverscriptBox["\[Del]", "\[RightVector]"], 
+       RowBox[{"f", "(", "a", ")"}]}], "\[CenterDot]", 
+      OverscriptBox["u", "\[RightVector]"]}], "=", 
+     RowBox[{"||", 
+      RowBox[{
+       OverscriptBox["\[Del]", "\[RightVector]"], 
+       RowBox[{"f", "(", "a", ")"}]}], "||", "||", 
+      OverscriptBox["u", "\[RightVector]"], "||", "cos\[Theta]"}]}]}], 
+   TraditionalForm]]],
+ ", we know the equation will be 0 (meaning no change) when \[Theta]=90 since \
+cos(90)=0 meaning ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[Del]", "\[RightVector]"], 
+     RowBox[{"f", "(", "a", ")"}]}], " ", "and", " ", 
+    OverscriptBox["u", "\[RightVector]"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are perpendicular. We can solve using the ",
+ StyleBox["Solve[ ] ",
+  FontWeight->"Bold"],
+ "command:"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6531398180232897`*^9, 3.6531398855416603`*^9}, {
+   3.6533977660569*^9, 3.6533978252519007`*^9}, {3.653489680212426*^9, 
+   3.6534896877594423`*^9}, {3.653489778133476*^9, 3.6534897879617205`*^9}, {
+   3.653489893625594*^9, 3.653489956849846*^9}, {3.6534965316952367`*^9, 
+   3.6534965463916616`*^9}, {3.6535002959677134`*^9, 
+   3.6535003754514413`*^9}, {3.6535004531904097`*^9, 3.653500483217184*^9}, {
+   3.6535005139498196`*^9, 3.6535005494805317`*^9}, {3.6535006047417564`*^9, 
+   3.653500610977193*^9}, {3.6535007073768625`*^9, 3.6535007629436636`*^9}, {
+   3.6535008829024515`*^9, 3.653500888223755*^9}, {3.6535009185312853`*^9, 
+   3.6535009185312853`*^9}, {3.6535041666403227`*^9, 3.653504167095646*^9}, {
+   3.6535068788218827`*^9, 3.6535069969232564`*^9}, 3.6535085251596375`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"temp", "[", 
+     RowBox[{"4", ",", 
+      RowBox[{"-", "2"}], ",", "8"}], "]"}], ".", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "\[Equal]", "0"}], 
+  "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653506997906925*^9, 3.6535070362977953`*^9}, 
+   3.6535085251596375`*^9}],
+
+Cell[TextData[{
+ "Now we have ",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ " in terms of ",
+ StyleBox["x ",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["y",
+  FontSlant->"Italic"],
+ ". So we can choose any non-zero arbitrary points for ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["y",
+  FontSlant->"Italic"],
+ " and solve for ",
+ StyleBox["z ",
+  FontSlant->"Italic"],
+ "(non-zero because otherwise the point will be (0,0,0) which won\
+\[CloseCurlyQuote]t work for obvious reasons). So I\[CloseCurlyQuote]ll \
+choose the point (1,2) which yields (1,2,0). Converted to a unit vector ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["u", "\[RightVector]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " it becomes the vector ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox["1", 
+      SqrtBox["5"]], ",", 
+     FractionBox["2", 
+      SqrtBox["5"]], ",", "0"}], "}"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". When this is plugged into the equation:"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653507042898833*^9, 3.6535071127362876`*^9}, {
+   3.6535071525858207`*^9, 3.6535071550966067`*^9}, {3.6535074268907948`*^9, 
+   3.653507667820567*^9}, {3.653507741218011*^9, 3.65350775799091*^9}, 
+   3.6535085251596375`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"temp", "[", 
+    RowBox[{"4", ",", 
+     RowBox[{"-", "2"}], ",", "8"}], "]"}], ".", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "0"}], "}"}]}], "/", 
+  RowBox[{"Norm", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "0"}], "}"}], "]"}]}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6535075287859097`*^9, 3.6535075294163847`*^9}, {
+   3.653507674039851*^9, 3.653507704076363*^9}, 3.6535085251596375`*^9, {
+   3.6535085815426426`*^9, 3.6535085837612114`*^9}}],
+
+Cell["\<\
+The answer is 0 (non-changing) meaning that the spaceship should travel in \
+the direction of (1,2,0) to keep the temperature constant.\
+\>", "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653507762355756*^9, 3.6535077926702394`*^9}, 
+   3.6535085251596375`*^9}]
+}, Closed]]
+},
+WindowSize->{1536, 783},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 169, 3, 80, "Text"],
+Cell[CellGroupData[{
+Cell[752, 27, 242, 7, 73, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[997, 36, 1762, 41, 52, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[2762, 79, 1254, 35, 112, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4019, 116, 721, 15, 61, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]],
+Cell[4755, 134, 123, 2, 33, "Input"],
+Cell[CellGroupData[{
+Cell[4903, 140, 258, 4, 59, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[5164, 146, 2171, 55, 80, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[7338, 203, 903, 23, 72, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[8244, 228, 2522, 56, 130, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[10769, 286, 416, 12, 31, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[11188, 300, 1326, 42, 65, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[12517, 344, 560, 14, 31, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[13080, 360, 308, 6, 30, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

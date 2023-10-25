@@ -1,0 +1,437 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14108,        428]
+NotebookOptionsPosition[     13034,        393]
+NotebookOutlinePosition[     13377,        408]
+CellTagsIndexPosition[     13334,        405]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 1 Problems 2, 4, 6",
+ FontSize->36]], "Text",
+ CellChangeTimes->{{3.651321620609548*^9, 3.651321628212657*^9}, {
+  3.6513216637034693`*^9, 3.6513216984944763`*^9}, {3.6516804907921124`*^9, 
+  3.651680497041548*^9}}],
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["Exercise 2",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.651321706302444*^9, 3.651321726262374*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1.5", 
+       RowBox[{"x", "^", "2"}]}], "+", 
+      RowBox[{"y", "^", "2"}]}], ")"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651321728753276*^9, 3.651321752744053*^9}, {
+   3.651321829840795*^9, 3.651321977705406*^9}, {3.651322008674698*^9, 
+   3.651322036329372*^9}, {3.651322077442911*^9, 3.6513223333073053`*^9}, {
+   3.6513223844352427`*^9, 3.6513224136107273`*^9}, {3.651322446763254*^9, 
+   3.6513224471860237`*^9}, {3.651322492547501*^9, 3.651322625850317*^9}, {
+   3.65132269167525*^9, 3.651322775106469*^9}, {3.651323089251916*^9, 
+   3.651323100729691*^9}, {3.6513232630592737`*^9, 3.651323281403219*^9}, 
+   3.651323598373186*^9, {3.6516709260527163`*^9, 3.6516709340713964`*^9}, {
+   3.651670967428251*^9, 3.6516709705875206`*^9}, {3.6516710374280853`*^9, 
+   3.6516710392023153`*^9}, {3.6516711125720873`*^9, 
+   3.6516711239331183`*^9}, {3.65167188336825*^9, 3.651671883569365*^9}, {
+   3.6516720731397953`*^9, 3.651672074487754*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.651673751313259*^9, 3.6516738052805257`*^9}}],
+
+Cell[TextData[StyleBox["\nExercise 4",
+ FontSize->18]], "Text",
+ CellChangeTimes->{{3.651322788936111*^9, 3.651322820495632*^9}, {
+  3.6516736745391283`*^9, 3.6516737256019993`*^9}, {3.6516737705638957`*^9, 
+  3.6516737982075095`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"y", "^", "2"}], "-", 
+     RowBox[{"2", 
+      RowBox[{"z", "^", "2"}]}]}], "\[Equal]", "4"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "25"}], ",", "25"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "25"}], ",", "25"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "25"}], ",", "25"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAGIQXeNy9GCEyWvHLVkHj4DogBOs50G0z9k/YPrenRKG
+SCCdsluKF0RPOmguAqJnpW8RBdErnlhIgWi3mZ5yIPowQ7gSiHZaHqcKouck
+p2uDaPm9r3VAdJ7KHmMQ/ck50hzMT1S3BdFKRjpuILpsT8ErJlOgO/5HvwHR
+UasNxJlBdF+zAojeNDdNC0SrLPwKps3NTxqC6CmZDMYgumNOmiOInssp5wSi
+QzRUEkF0S+GvVBCdWcGQBaLfRsTmgGjphNJ9IHrLiiowfbl42jEQPW3dh+Mg
+utJl0wsQzZLX8BJEr/FN/wWi76kF/AXRK7y8LNmAtNTmdGsQPfWtUBKI7ppr
+lQKiszVfWLMD6VgfZ3sQPS1ktiuItnpp5AmiAYjdoTI=
+  "]],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["z=0",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.6516708411359396`*^9, 3.6516708650089297`*^9}, {
+  3.6516719656124196`*^9, 3.6516719665510855`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"y", "^", "2"}]}], "==", "4"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6516708699020433`*^9, 3.651670915182027*^9}, {
+   3.65167193806002*^9, 3.6516720495223446`*^9}, {3.6516721105703506`*^9, 
+   3.6516721473534455`*^9}, {3.651672206991748*^9, 3.6516722157799816`*^9}, 
+   3.6516727917278576`*^9, 3.6516730126431103`*^9, {3.6516740977086773`*^9, 
+   3.651674136167182*^9}, {3.6516741813332224`*^9, 3.6516741910270987`*^9}, {
+   3.6516743927809057`*^9, 3.6516744021885805`*^9}, {3.6516788147008443`*^9, 
+   3.651678823174857*^9}}],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["z=\[PlusMinus]2",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.6516726333143153`*^9, 3.6516726447974625`*^9}, {
+  3.651672692064864*^9, 3.6516727068296194`*^9}, {3.6516730526785107`*^9, 
+  3.6516730960973387`*^9}, {3.651673148970847*^9, 3.651673150887209*^9}, {
+  3.651673256218569*^9, 3.651673371533394*^9}, {3.651673565339263*^9, 
+  3.6516735666591983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"y", "^", "2"}]}], "\[Equal]", "12"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6516735706730475`*^9, 3.6516735777550726`*^9}, {
+  3.65167362000992*^9, 3.6516736456731243`*^9}, {3.651674195767383*^9, 
+  3.6516743669435763`*^9}, {3.65167440819584*^9, 3.651674418609227*^9}, {
+  3.6516789239149504`*^9, 3.651678931769506*^9}}],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["x=0",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.651674463535383*^9, 3.651674474262994*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], "-", 
+     RowBox[{"2", 
+      RowBox[{"z", "^", "2"}]}]}], "\[Equal]", "4"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651674476375496*^9, 3.6516745257545514`*^9}, {
+  3.6516782493422475`*^9, 3.651678255542646*^9}, {3.651678862094469*^9, 
+  3.651678868143758*^9}}],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["x=\[PlusMinus]2",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.6516782822423973`*^9, 3.651678293910677*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], "-", 
+     RowBox[{"2", 
+      RowBox[{"z", "^", "2"}]}]}], "\[Equal]", "0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6516782958490667`*^9, 3.651678314347169*^9}, {
+  3.6516785527612057`*^9, 3.6516786000756207`*^9}, {3.6516789417215652`*^9, 
+  3.6516789445035396`*^9}}],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["y=0",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.651678709273088*^9, 3.651678715095211*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "-", 
+     RowBox[{"2", 
+      RowBox[{"z", "^", "2"}]}]}], "\[Equal]", "4"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6516787719991465`*^9, 3.651678776347231*^9}, {
+  3.6516789050789595`*^9, 3.651678911199301*^9}, {3.651678953604995*^9, 
+  3.6516789786476088`*^9}}],
+
+Cell[TextData[{
+ "Cross Section at ",
+ StyleBox["y=\[PlusMinus]2",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.6516790187040224`*^9, 3.6516790271270237`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "-", 
+     RowBox[{"2", 
+      RowBox[{"z", "^", "2"}]}]}], "\[Equal]", "0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651679039945092*^9, 3.651679123017186*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.6516738180575895`*^9, 3.6516738200750194`*^9}}],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Exercise 6",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.651324584506247*^9, 3.6513245977382517`*^9}, 
+   3.651673823089181*^9}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"4", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"z", "-", "2"}], ")"}], "^", "2"}]}], "\[Equal]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"x", "-", "1"}], ")"}], "^", "2"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}], ")"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651324684286957*^9, 3.6513247337096243`*^9}, {
+   3.651324813104048*^9, 3.651324816742906*^9}, {3.651324855551569*^9, 
+   3.651324864589334*^9}, {3.651671913759788*^9, 3.651671918870414*^9}, {
+   3.651679227533202*^9, 3.6516792329030123`*^9}, {3.6516792761111317`*^9, 
+   3.651679278236642*^9}, {3.65167946432761*^9, 3.651679499942874*^9}, 
+   3.651679585407504*^9, {3.6516796242239804`*^9, 3.651679712548643*^9}, {
+   3.6516797670372972`*^9, 3.651679775016958*^9}, {3.6516798921664314`*^9, 
+   3.651679918566159*^9}, {3.651680689412018*^9, 3.6516807167689133`*^9}, {
+   3.6516808673282275`*^9, 3.651681019895479*^9}}],
+
+Cell[TextData[{
+ "Equation of the Double Cone with vertex (1,1,2) and intersects the ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ "-plane",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["z=0",
+  FontSlant->"Italic"],
+ ")",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "in a circle with a radius of 4:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", "1"}], ")"}], "2"], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"y", "-", "1"}], ")"}], "2"]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"4", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "2"]}], " ", "\[Equal]", " ", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", "1"}], ")"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", "1"}], ")"}], "2"], "-", 
+       RowBox[{"4", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"z", "-", "2"}], ")"}], "2"]}]}]}], "=", "0"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->18,
+  FontWeight->"Bold"],
+ "\n\nGraph of the Intersection at the ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ "-plane:"
+}], "Text",
+ CellChangeTimes->{{3.6516794390514555`*^9, 3.6516794486292295`*^9}, {
+  3.651679936427828*^9, 3.651680057716922*^9}, {3.6516801049466496`*^9, 
+  3.651680158564031*^9}, {3.651680279583411*^9, 3.6516802929709263`*^9}, {
+  3.65168036761286*^9, 3.6516803890413275`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"x", "-", "1"}], ")"}], "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}], "\[Equal]", 
+    RowBox[{"4", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"-", "2"}], ")"}], "^", "2"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651679285180174*^9, 3.6516793339797916`*^9}, {
+   3.6516793670368814`*^9, 3.6516793742990327`*^9}, {3.6516799025588026`*^9, 
+   3.651679907613387*^9}, {3.6516804175062313`*^9, 3.6516804539697247`*^9}, 
+   3.6516805445452647`*^9}]
+},
+WindowSize->{1267, 805},
+WindowMargins->{{Automatic, -9}, {Automatic, 60}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 243, 4, 55, "Text"],
+Cell[804, 26, 142, 5, 73, "Text"],
+Cell[949, 33, 1252, 26, 31, "Input"],
+Cell[2204, 61, 124, 2, 42, "Input"],
+Cell[2331, 65, 235, 4, 59, "Text"],
+Cell[2569, 71, 1031, 27, 31, "Input"],
+Cell[3603, 100, 212, 6, 30, "Text"],
+Cell[3818, 108, 896, 20, 31, "Input"],
+Cell[4717, 130, 421, 9, 30, "Text"],
+Cell[5141, 141, 689, 17, 31, "Input"],
+Cell[5833, 160, 155, 5, 30, "Text"],
+Cell[5991, 167, 615, 17, 31, "Input"],
+Cell[6609, 186, 169, 5, 30, "Text"],
+Cell[6781, 193, 621, 17, 31, "Input"],
+Cell[7405, 212, 155, 5, 30, "Text"],
+Cell[7563, 219, 617, 17, 31, "Input"],
+Cell[8183, 238, 171, 5, 30, "Text"],
+Cell[8357, 245, 513, 15, 31, "Input"],
+Cell[8873, 262, 126, 2, 42, "Input"],
+Cell[9002, 266, 168, 6, 54, "Text"],
+Cell[9173, 274, 1449, 35, 31, "Input"],
+Cell[10625, 311, 1523, 53, 110, "Text"],
+Cell[12151, 366, 879, 25, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

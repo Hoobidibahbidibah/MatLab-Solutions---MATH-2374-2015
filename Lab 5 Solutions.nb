@@ -1,0 +1,595 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19727,        586]
+NotebookOptionsPosition[     18171,        538]
+NotebookOutlinePosition[     18564,        555]
+CellTagsIndexPosition[     18521,        552]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Lab 5 Exercise 1",
+ FontSize->48]], "Text",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.653742255106051*^9, 3.653742261267003*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["\n\n",
+  FontSize->16],
+ StyleBox["Part a)",
+  FontSize->18]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6537422828677483`*^9, 3.653742290963635*^9}, 
+   3.653777271218295*^9, {3.6537773021802588`*^9, 3.6537773024364443`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"cyl", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"2", "+", 
+       RowBox[{"2", 
+        RowBox[{"Cos", "[", "t", "]"}]}]}], ",", 
+      RowBox[{"2", "*", 
+       RowBox[{"Sin", "[", "t", "]"}]}], ",", "s"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", "0", ",", "10"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"X", ",", "Y", ",", "Z"}], "}"}]}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Gray"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plane1", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", 
+       RowBox[{"7", "-", 
+        RowBox[{"x", "/", "2"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "False"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"cyl", ",", "plane1"}], "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653742360342884*^9, 3.653742366206702*^9}, {
+   3.653742399480506*^9, 3.653742427002308*^9}, {3.653742480714293*^9, 
+   3.653742505881301*^9}, {3.653742564481488*^9, 3.653742765977976*^9}, {
+   3.65374280064369*^9, 3.653742842707457*^9}, {3.653742973269432*^9, 
+   3.653742973636921*^9}, {3.6537430357739477`*^9, 3.65374315075006*^9}, {
+   3.653743387789173*^9, 3.653743520036963*^9}, {3.653743557311658*^9, 
+   3.653743791782201*^9}, 3.653777271218295*^9, 3.6538687362968845`*^9}],
+
+Cell[TextData[{
+ "The equation of the plane through the cylinder is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", "-", 
+    FractionBox["x", "2"]}], TraditionalForm]]],
+ ". To find the volume the liquid occupies, we must find the region of \
+integration. The region of integration will be from the bottom of the tank to \
+the plane. At the bottom of the tank, the region is given by the inequality \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", "2"}], ")"}], "2"], "+", 
+     SuperscriptBox["y", "2"]}], "\[LessEqual]", " ", "4"}], 
+   TraditionalForm]]],
+ " so the double integral is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox[
+     OverscriptBox["\[Integral]", "4"], "0"], 
+    RowBox[{
+     OverscriptBox[
+      UnderscriptBox["\[Integral]", 
+       RowBox[{"-", 
+        RowBox[{"\[Sqrt]", 
+         RowBox[{"(", 
+          RowBox[{"4", "-", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"x", "-", "2"}], ")"}], "2"]}], ")"}]}]}]], 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{"4", "-", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", "2"}], ")"}], "2"]}], ")"}]}]], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"7", "-", 
+        FractionBox["x", "2"]}], ")"}], "dydx"}]}]}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653743021647129*^9, 3.6537430310070066`*^9}, {
+   3.653743171535918*^9, 3.6537432248588257`*^9}, {3.653743823467165*^9, 
+   3.653743964851941*^9}, {3.653743995974802*^9, 3.6537441793893013`*^9}, {
+   3.653744213337267*^9, 3.6537442429289913`*^9}, 3.653777271218295*^9, {
+   3.653777636837583*^9, 3.6537776455057254`*^9}, {3.654205739657938*^9, 
+   3.6542057416403465`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"7", "-", 
+    RowBox[{"x", "/", "2"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"4", "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "-", "2"}], ")"}], "^", "2"}]}], "]"}]}], ",", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"4", "-", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "2"}], ")"}], "^", "2"}]}], "]"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.65374418083712*^9, 3.653744207542408*^9}, {
+   3.653744248574893*^9, 3.653744279712304*^9}, 3.653777271218295*^9, {
+   3.654203122936173*^9, 3.654203127100161*^9}, {3.654205137944848*^9, 
+   3.6542051463848495`*^9}, {3.6543053517807693`*^9, 
+   3.6543053919209366`*^9}, {3.654305428718896*^9, 3.654305528666625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "(Just for fun, here\[CloseCurlyQuote]s the triple integral: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox[
+     OverscriptBox["\[Integral]", "4"], "0"], 
+    RowBox[{
+     UnderscriptBox[
+      OverscriptBox["\[Integral]", 
+       RowBox[{"7", "-", 
+        FractionBox["x", "2"]}]], "0"], 
+     RowBox[{
+      OverscriptBox[
+       UnderscriptBox["\[Integral]", 
+        RowBox[{"-", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{"4", "-", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"x", "-", "2"}], ")"}], "2"]}], ")"}]}]}]], 
+       RowBox[{"\[Sqrt]", 
+        RowBox[{"(", 
+         RowBox[{"4", "-", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"x", "-", "2"}], ")"}], "2"]}], ")"}]}]], "dxdzdy"}]}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", which yeilds the same result, open the subgroup)"
+}], "Text",
+ CellChangeTimes->{{3.6543055319639745`*^9, 3.6543055717618313`*^9}, {
+  3.6543056195197964`*^9, 3.654305695934891*^9}, {3.6543059001269455`*^9, 
+  3.6543059247060785`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", "0", ",", 
+     RowBox[{"7", "-", 
+      RowBox[{"x", "/", "2"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"4", "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "-", "2"}], ")"}], "^", "2"}]}], "]"}]}], ",", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"4", "-", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "2"}], ")"}], "^", "2"}]}], "]"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.65374418083712*^9, 3.653744207542408*^9}, {
+   3.653744248574893*^9, 3.653744279712304*^9}, 3.653777271218295*^9, {
+   3.654203122936173*^9, 3.654203127100161*^9}, {3.654205137944848*^9, 
+   3.6542051463848495`*^9}, {3.6543053517807693`*^9, 
+   3.6543053919209366`*^9}, {3.654305428718896*^9, 3.654305528666625*^9}, {
+   3.6543055775649633`*^9, 3.6543056035154114`*^9}, {3.654305917053646*^9, 
+   3.6543059280684977`*^9}}]
+}, Closed]],
+
+Cell[TextData[{
+ "\nThus the volume the water takes up is ",
+ StyleBox["24\[Pi]\[TildeTilde]75.40 cubic meters",
+  FontWeight->"Bold"],
+ ". Now to find the angle the cylinder is tilted, we can draw a side \
+elevation of the equation and then find the angle between the tilted plane \
+(represented by a line) and the dotted line (which represents the plane ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ "=5):"
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.6537444022936373`*^9, 3.6537445276865053`*^9}, {
+   3.653744696511528*^9, 3.653744710943397*^9}, {3.6537448047039003`*^9, 
+   3.6537448329437017`*^9}, 3.653777271218295*^9, {3.6542052326419797`*^9, 
+   3.6542052333935356`*^9}, {3.654305261898369*^9, 3.6543052936824055`*^9}, 
+   3.6543059334262953`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "\[GreaterEqual]", "0"}], ")"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{"x", "\[LessEqual]", "4"}], ")"}]}], ",", "10", ",", "0"}], 
+      "]"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "\[GreaterEqual]", "0"}], ")"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{"x", "\[LessEqual]", "4"}], ")"}]}], ",", 
+       RowBox[{"7", "-", 
+        RowBox[{"x", "/", "2"}]}]}], "]"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "z"}], "}"}]}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Gray", ",", "Blue", ",", 
+      RowBox[{"{", 
+       RowBox[{"Dotted", ",", "Black"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653744529875099*^9, 3.653744674779113*^9}, {
+   3.653744714011795*^9, 3.653744798914256*^9}, 3.653777271218295*^9, {
+   3.6538698162818503`*^9, 3.6538698774122953`*^9}, {3.6538700148990836`*^9, 
+   3.6538700495545764`*^9}, {3.653870204180681*^9, 3.653870204580966*^9}}],
+
+Cell[TextData[{
+ "As shown by the graph, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"tan\[Theta]", "=", 
+    FractionBox["2", "4"]}], TraditionalForm]]],
+ " so the angle \[Theta] and thus the angle at which the graph is tilted is \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["tan", 
+      RowBox[{"-", "1"}]], 
+     FractionBox["2", "4"]}], "=", 
+    RowBox[{
+     StyleBox["26.6",
+      FontWeight->"Bold"], 
+     StyleBox[" ",
+      FontWeight->"Bold"], 
+     RowBox[{
+      StyleBox["degrees",
+       FontWeight->"Bold"], "."}]}]}], TraditionalForm]]]
+}], "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{{3.653744840519133*^9, 3.653744966216632*^9}, {
+   3.653745022296995*^9, 3.653745038842737*^9}, 3.653777271218295*^9}]
+}, Closed]],
+
+Cell["", "Text",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.6537773595062485`*^9, 3.6537773716638784`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\n",
+ StyleBox["Part b)",
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.653777389113268*^9, 3.653777455317264*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"plane2", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", 
+       RowBox[{"7", "-", 
+        RowBox[{"7", 
+         RowBox[{"x", "/", "3"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"Show", "[", 
+  RowBox[{"cyl", ",", "plane2", ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6537775705983276`*^9, 3.6537775985141325`*^9}, {
+  3.6538687476238995`*^9, 3.6538687584315586`*^9}}],
+
+Cell[TextData[{
+ "The equation of the plane representing the liquid is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", "-", 
+    FractionBox[
+     RowBox[{"7", "x"}], "3"]}], TraditionalForm]]],
+ ". This double integral is going to be tougher to set up as is, so to \
+simplify the problem as not the entire region at the bottom of the tank will \
+be integrated since the bottom isn\[CloseCurlyQuote]t entirely covered by \
+water. The region at the bottom of the tank is given by the inequality ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{Cell[""], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"x", "-", "2"}], ")"}], "2"]}], "+", 
+     SuperscriptBox["y", "2"]}], "\[LessEqual]", " ", "4"}], 
+   TraditionalForm]]],
+ ". Looking at the cross section where the water fills the bottom:"
+}], "Text",
+ CellChangeTimes->{{3.6538693116065736`*^9, 3.6538693855731835`*^9}, {
+  3.6538694888530664`*^9, 3.6538695436528006`*^9}, {3.654304111151167*^9, 
+  3.6543042155235724`*^9}, {3.6543042869753942`*^9, 3.6543043424881268`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[Equal]", "4"}], ",", 
+     RowBox[{"x", "\[Equal]", "3"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"ContourStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Gray", ",", "Blue"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6543043524772596`*^9, 3.654304697604725*^9}}],
+
+Cell[TextData[{
+ "The region is x-simple with the bounds of integration being ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", "2"}], "\[LessEqual]", "y", "\[LessEqual]", 
+    RowBox[{"2", " ", "and", " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "-", 
+       SqrtBox[
+        RowBox[{"4", "-", 
+         SuperscriptBox["y", "2"]}]]}], ")"}]}], "\[LessEqual]", "x", 
+    "\[LessEqual]", 
+    RowBox[{
+    "3", " ", "making", " ", "the", " ", "double", " ", "integral", " ", 
+     RowBox[{
+      UnderscriptBox[
+       OverscriptBox["\[Integral]", "2"], 
+       RowBox[{"-", "2"}]], 
+      RowBox[{
+       OverscriptBox[
+        UnderscriptBox["\[Integral]", 
+         RowBox[{"2", "-", 
+          SqrtBox[
+           RowBox[{"4", "-", 
+            SuperscriptBox["y", "2"]}]]}]], "3"], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"7", "-", 
+          RowBox[{"7", 
+           FractionBox["x", "3"]}]}], ")"}], "dxdy"}]}]}]}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.6538693116065736`*^9, 3.6538693855731835`*^9}, {
+  3.6538694888530664`*^9, 3.6538695436528006`*^9}, {3.654304111151167*^9, 
+  3.6543042155235724`*^9}, {3.6543042869753942`*^9, 3.6543043424881268`*^9}, {
+  3.6543047091664476`*^9, 3.6543047689224377`*^9}, {3.6543049892086945`*^9, 
+  3.6543051850729127`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"7", "-", 
+    RowBox[{"7", 
+     RowBox[{"x", "/", "3"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"4", "-", 
+         RowBox[{"y", "^", "2"}]}], "]"}]}], "+", "2"}], ",", "3"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", "%", "]"}]}], "Input"],
+
+Cell[TextData[{
+ "So the volume of the water is ",
+ StyleBox["\[TildeTilde]31.77 cubic meters. ",
+  FontWeight->"Bold"],
+ "To find the angle tilted, we look at the cross section of the ",
+ StyleBox["xz",
+  FontSlant->"Italic"],
+ "-plane:"
+}], "Text",
+ CellChangeTimes->{{3.6538693116065736`*^9, 3.6538693855731835`*^9}, {
+  3.6538694888530664`*^9, 3.6538695436528006`*^9}, {3.654304111151167*^9, 
+  3.6543042155235724`*^9}, {3.6543042869753942`*^9, 3.6543043424881268`*^9}, {
+  3.654305194962948*^9, 3.6543052478849163`*^9}, {3.6543053003431416`*^9, 
+  3.654305329756065*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "\[GreaterEqual]", "0"}], ")"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{"x", "\[LessEqual]", "4"}], ")"}]}], ",", "10", ",", "0"}], 
+      "]"}], ",", 
+     RowBox[{"7", "-", 
+      RowBox[{"7", 
+       RowBox[{"x", "/", "3"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "10"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "z"}], "}"}]}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Gray", ",", "Blue"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.653869436345399*^9, 3.653869477081744*^9}, {
+   3.653869578074214*^9, 3.653869605779866*^9}, {3.6538696763003163`*^9, 
+   3.6538697017695537`*^9}, 3.6538697615757947`*^9, {3.654305949352607*^9, 
+   3.6543059524428015`*^9}}],
+
+Cell[TextData[{
+ "Find arctan 7/3 which is ",
+ StyleBox["\[TildeTilde]66.8 degrees.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.653870364475009*^9, 3.653870397852679*^9}, {
+   3.654205246371765*^9, 3.654205249334872*^9}, {3.654205298998107*^9, 
+   3.654205326911932*^9}, {3.654205752588103*^9, 3.6542057533636827`*^9}, 
+   3.6543053335938387`*^9, {3.6543059563876066`*^9, 3.654306003545828*^9}, {
+   3.6543063102647*^9, 3.65430632209111*^9}}]
+}, Closed]]
+},
+CellGrouping->Manual,
+WindowSize->{752, 767},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>1.05 Inherited,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 163, 3, 83, "Text"],
+Cell[CellGroupData[{
+Cell[746, 27, 296, 8, 81, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[1045, 37, 2009, 51, 112, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[3057, 90, 1841, 53, 149, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[4901, 145, 1036, 27, 52, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[CellGroupData[{
+Cell[5962, 176, 1125, 34, 101, "Text"],
+Cell[7090, 212, 1158, 30, 54, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]],
+Cell[8263, 245, 796, 16, 90, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[9062, 263, 1408, 37, 72, "Input",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}],
+Cell[10473, 302, 785, 26, 70, "Text",
+ CellGroupingRules->{GroupTogetherGrouping, 10000.}]
+}, Closed]],
+Cell[11273, 331, 118, 2, 37, "Text"],
+Cell[CellGroupData[{
+Cell[11416, 337, 137, 5, 57, "Text"],
+Cell[11556, 344, 852, 23, 72, "Input"],
+Cell[12411, 369, 1054, 25, 123, "Text"],
+Cell[13468, 396, 669, 20, 52, "Input"],
+Cell[14140, 418, 1351, 39, 93, "Text"],
+Cell[15494, 459, 507, 17, 52, "Input"],
+Cell[16004, 478, 576, 13, 53, "Text"],
+Cell[16583, 493, 1113, 31, 52, "Input"],
+Cell[17699, 526, 456, 9, 32, "Text"]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)
